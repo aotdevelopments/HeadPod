@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#55c5cf</color>
+    <color name="colorPrimaryDark">#91e5ed</color>
+    <color name="colorAccent">#178E9C</color>
+    <color name="ColorSecundadrio">#333465</color><!--#333464--><!--#09195c-->
+    <color name="rojo_ocuro">#8B0000</color>
+
+    <color name="colorPrimaryLogin">#BEE5F0</color>
+    <color name="colorPrimaryDarkLogin">#D9F3F9</color>
+    <color name="colorAccentLogin">#55c5cf</color>
+
+    <!--EditText-->
+    <!--Color pestana superior-->
+    <color name="color_pestana_superior">#B1DED3</color>
+    <color name="color_pestana_superior_presionada">#88ABA3</color>
+
+    <!-- Color pestana inferior (below)-->
+    <color name="color_pestana_inactiva">#BEE5F0</color>
+    <color name="color_pestana_presionada">#96B4BD</color>
+
+
+    <!--color Cabezas-->
+    <color name="blanco">#FFFFFF</color>
+    <color name="verde">#8CC63E</color>
+    <color name="amarrillo">#F8ED31</color>
+    <color name="naranja">#F7931D</color>
+    <color name="rojo">#BE1E2D</color>
+
+
+
+    <!--Informes de las graficas-->
+    <!--********************************************************************************-->
+
+    <!--Fondo-->
+    <color name="data_fondo">#ECF6F3</color><!--ECF6F3-->
+
+    <!--Contenedor_Movent_control -->
+    <!--**************************************************************-->
+    <!--color_seleccion-->
+    <color name="data_color_select">#55C5CF</color>
+
+    <!--Color_poor-->
+    <color name="data_poor">#ED1C24</color>
+    <!--color normal-->
+    <color name="data_normal">#F7931D</color>
+    <!--Color_bueno-->
+    <color name="data_good">#8CC63E</color>
+    <!--**************************************************************-->
+
+
+
+
+    <!--Contenedor_Porcentaje de tiempo en cada rango-->
+    <!--**************************************************************-->
+
+    <color name="data_borde_inf_porcentaje_good">#38B449</color>
+    <color name="data_borde_inf_porcentaje_bad">#ED1C24</color>
+
+
+    <!--Fondo_leyenda_buena-->
+    <color name="data_fondo_porcentaje_good">#4d38B449</color><!--hay que cambiar la opacidad/alpha al 30%--><!--Link http://stackoverflow.com/questions/23201134/transparent-argb-hex-value-->
+
+    <!--Fondo_leyenda_mala-->
+    <color name="data_fondo_porcentaje_bad">#4dED1C24</color><!--hay que cambiar la opacidad/alpha al 30% se hace poniendo el 4d delante-->
+
+
+
+
+    <color name="data_leyenda_porcentaje_good">#00A14B</color>
+    <color name="data_leyenda_porcentaje_fair">#D6DF23</color>
+    <color name="data_leyenda_porcentaje_bad">#F05A28</color>
+    <color name="data_leyenda_porcentaje_very_bad">#ED1C24</color>
+
+
+    
+
+
+
+    <!--**************************************************************-->
+
+
+
+
+
+
+
+    <!--Contenedor_Movent_control -->
+    <!--**************************************************************-->
+
+
+
+
+    <!--**************************************************************-->
+
+
+
+    <!--Contenedor_Movent_control -->
+    <!--**************************************************************-->
+
+
+
+
+    <!--**************************************************************-->
+
+
+
+
+    <!--Color ejes Grafica lineal-->
+    <color name="data_background">#ECF6F3</color>
+    <color name="data_inclination">#38B449 </color>
+    <color name="data_flexion">#FBAF3F</color>
+    <color name="data_rotacion">#213F99</color>
+    <!--********************************************************************************-->
+
+
+
+    <!--Color verdes rotación -->
+    <!--**************************************************************-->
+
+    <color name="data_rotation_color25">#38B449</color>
+
+    <!---->
+
+    <!--**************************************************************-->
+
+
+
+
+
+</resources>
+
+<!--http://desarrollador-android.com/material-design/diseno-material-design/estilo/color/-->
+<!--Para obtener el hexadecimal de este fichero-->
+        <!--String hexColor = Integer.toHexString(ContextCompat.getColor(context, resourceColor) & 0x00ffffff);-->

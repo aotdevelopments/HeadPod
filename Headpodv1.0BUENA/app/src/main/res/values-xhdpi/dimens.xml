@@ -1,0 +1,47 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">12dp</dimen><!--16-->
+    <dimen name="activity_vertical_margin">12dp</dimen><!--16-->
+
+    <dimen name="text_size_title">24sp</dimen><!--24-->
+    <dimen name="text_size_subtitle">20sp</dimen><!--20-->
+    <dimen name="text_size_standard">16sp</dimen><!--16-->
+    <dimen name="text_size_little">10sp</dimen><!--10-->
+
+
+
+
+
+
+
+
+
+
+
+    <!--Informe-->
+    <!--******************************************************************************-->
+
+    <!--Control de movimientos-->
+    <!--*******************************************************************-->
+    <dimen name="inf_size_select_result">40dp</dimen>
+    <dimen name="inf_size_padding_select_result">6dp</dimen>
+    <dimen name="inf_size_select_no_result">28dp</dimen>
+    <!--*********************************************************************-->
+
+
+    <!--Leyenda rangos-->
+    <dimen name="inf_leyenda_rangos_size_horizonal">10dp</dimen>
+    <dimen name="margin_leyenda_size_color_horizontal">4dp</dimen>
+
+    <!--******************************************************************************-->
+
+
+
+    <!--Leyenda grafica lineal-->
+
+    <dimen name="height_leyenda_lineal">80dp</dimen>
+    <dimen name="height_grafica_lineal">300dp</dimen>
+
+
+
+</resources>

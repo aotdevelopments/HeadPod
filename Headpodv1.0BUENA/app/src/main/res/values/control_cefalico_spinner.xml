@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources >
+    <string-array name="control_cefalico">
+        <item >@string/bueno</item>
+        <item>@string/regular</item>
+        <item>@string/malo</item>
+        <item>@string/ninguno</item>
+    </string-array>
+</resources>

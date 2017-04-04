@@ -1,0 +1,53 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contenedor_fragmentos"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+
+    android:paddingBottom="4dp"
+    android:paddingTop="4dp"
+    android:paddingStart="0.2dp"
+    android:paddingEnd="3.8dp"
+
+    tools:context=".fragments.BotonPestanaFragment">
+
+    <!--Con ImageButton no detecta el click del layout contenedor-->
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:paddingTop="7.8dp"
+        android:paddingBottom="7.8dp"
+        android:paddingStart="7.8dp"
+        android:paddingEnd="7.8dp"
+
+
+        android:id="@+id/btnPestanaSuperior"
+        android:contentDescription="@string/descripcion_button"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:src="@drawable/btn_pestana_efectos"
+
+        android:background="@null"
+        android:alpha="1"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentStart="true" />
+
+    <TextView
+        android:id="@+id/txtBtnPestana"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        android:text="@string/btn_avatar_izquierda_inicio"
+
+        android:textColor="@color/colorPrimary"
+
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@+id/btnPestanaSuperior" />
+<!-- android:textSize="@dimen/text_size_standard"-->
+        <!-- android:background="@drawable/txt_background_efecto"-->
+
+</RelativeLayout>
+
+

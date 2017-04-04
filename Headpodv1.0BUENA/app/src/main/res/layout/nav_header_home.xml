@@ -1,0 +1,183 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/nav_header_height"
+    android:background="@drawable/side_nav_bar"
+    android:orientation="vertical"
+    android:gravity="start"
+
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
+    android:theme="@style/ThemeOverlay.AppCompat.Light">
+
+    <!--android:gravity="bottom"-->
+   <!-- android:layout_height="@dimen/nav_header_height"--><!--160dp-->
+
+        <!--android:src="@android:drawable/sym_def_app_icon"-->
+        <!--C:\Program Files\Android\Android Studio\plugins\android\lib\layoutlib\data\res\drawable-ldpi\sym_def_app_icon.png-->
+
+
+   <!-- <TextView
+        android:id="@+id/txtPerfil"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/nav_header_vertical_spacing"
+
+        android:text="@string/perfil"
+
+        android:gravity="center_horizontal"
+
+
+        android:textAppearance="@style/TextAppearance.AppCompat.Title" />-->
+
+
+
+    <RelativeLayout
+
+        android:layout_gravity="center"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+
+        <ImageView
+
+            android:id="@+id/imageViewPerfil"
+            android:layout_width="70dp"
+            android:layout_height="70dp"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:adjustViewBounds="true"
+            android:scaleType="fitXY"
+            android:src="@drawable/monigote_verde_perfil"
+
+            android:clickable="true"
+            android:onClick="viewPerfil"/>
+        <!--   android:paddingTop="@dimen/nav_header_vertical_spacing"   android:paddingTop="@dimen/nav_header_vertical_spacing"-->
+
+        <TextView
+            android:id="@+id/txt_alias_menu"
+
+            android:layout_marginTop="36dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:text="@string/sin_alias"
+            android:clickable="true"
+            android:onClick="viewPerfil"
+
+            android:layout_centerHorizontal="true"
+
+            android:layout_below="@id/imageViewPerfil"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+        <!--    android:layout_toEndOf="@id/imageViewPerfil"-->
+        <!--    android:paddingTop="@dimen/nav_header_vertical_spacing"-->
+
+        <TextView
+            android:id="@+id/txt_email_menu"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:clickable="true"
+            android:onClick="viewPerfil"
+
+            android:layout_centerHorizontal="true"
+
+            android:layout_below="@id/txt_alias_menu"
+            android:text="dsfasfasf"
+
+             />
+
+
+
+
+
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+</LinearLayout>
+
+
+
+
+<!--
+
+
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+
+        >
+
+
+
+        <TextView
+            android:id="@+id/txtPerfil"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/nav_header_vertical_spacing"
+            android:text="@string/perfil"
+
+            android:gravity="center_horizontal"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Title" />
+
+        <ImageView
+            android:id="@+id/imageViewPerfil"
+            android:layout_width="77dp"
+            android:layout_height="wrap_content"
+
+            android:src="@drawable/monigote_verde_64"
+            android:layout_below="@id/txtPerfil"
+            android:clickable="true"
+            android:onClick="viewPerfil"/>
+            -->
+        <!--   android:paddingTop="@dimen/nav_header_vertical_spacing" -->
+<!--
+<TextView
+android:id="@+id/txt_alias_menu"
+android:paddingStart="5dp"
+android:paddingEnd="2dp"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+
+android:text="@string/terapeuta_alias"
+android:clickable="true"
+android:onClick="viewPerfil"
+
+
+android:layout_below="@id/imageViewPerfil"
+android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+-->
+
+    <!--    android:layout_toEndOf="@id/imageViewPerfil"-->
+    <!--    android:paddingTop="@dimen/nav_header_vertical_spacing"-->
+<!--
+<TextView
+android:id="@+id/txt_email_menu"
+android:paddingStart="5dp"
+android:paddingEnd="2dp"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+android:clickable="true"
+android:onClick="viewPerfil"
+android:layout_below="@id/txt_alias_menu"
+android:text="neomichael87@gmail.com" />
+
+
+    </RelativeLayout>
+
+
+-->

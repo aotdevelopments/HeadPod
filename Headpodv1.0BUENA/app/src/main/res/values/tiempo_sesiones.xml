@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources >
+    <string-array name="time_session">
+        <item >@string/tiempo_op1</item>
+        <item>@string/tiempo_op2</item>
+        <item>@string/tiempo_op3</item>
+        <item>@string/tiempo_op4</item>
+        <item>@string/tiempo_op5</item>
+    </string-array>
+</resources>

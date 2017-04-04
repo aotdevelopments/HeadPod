@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<animation-list xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/bateria_sensor_sin_bat">
+
+    <!--<item android:drawable="@drawable/bateria_mini_con_sensor_sin_bateria" android:duration="500" />-->
+    <item android:drawable="@drawable/bateria_mini_con_sensor_0" android:duration="500" />
+    <item android:drawable="@drawable/bateria_mini_con_sensor_0_rojo" android:duration="500" />
+
+</animation-list>

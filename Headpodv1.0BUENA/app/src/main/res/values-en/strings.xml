@@ -1,0 +1,543 @@
+<resources>
+    <string name="app_name">Headpod v1.0</string>
+
+    <string name="str_en">Inglés</string>
+    <string name="str_es">Español</string>
+    <string-array name="languages">
+        <item>@string/str_en</item>
+        <item>@string/str_es</item>
+
+    </string-array>
+
+    <string name="salir_pulsa_dos_veces">Press BACK again to exit</string>
+
+
+    <!--ESTA SECCION NO HACE FALTA TRADUCIR, pero hay que ponerla. Se usa para dar la descripción de un "botón"-->
+    <!--Content Description imageview-->
+    <string name="descripcion_logo">Logo</string>
+    <string name="descripcion_button">Button´s image</string>
+    <string name="descripcion_nino_senal_sensor">Child´s image, signal and sensor</string>
+    <string name="descripcion_buscando_sensor">Image searching sensor</string>
+    <string name="descripcion_img_buscar_paciente">Image of an eye symbolizing looking for patient</string>
+
+
+    <!--inicio - registro - login -->
+    <string name="login">Login</string>
+    <string name="register">Therapist´s login</string>
+    <string name="email">Email</string>
+    <string name="password">Password</string>
+    <string name="password2">Confirm password</string>
+    <string name="forget_password"><u>Forgot your password?</u></string>
+    <string name="no_tienes_usuario">Not a user? <u>Sign up</u></string>
+    <string name="subtitulo_registro">In order to manage patients you will need to create a professional user account</string>
+    <string name="titulo_inicial">Movement analysis system</string>
+    <string name="aviso_registro">In order to register patients you will need to create a user account</string>
+    <string name="cerrar_sesion">Sign off</string>
+
+
+    <!--avisos Registro-->
+    <string name="password1_vacia">Password can not be empty</string>
+    <string name="password2_vacia">Confirm password can not be empty</string>
+    <string name="password_distintas">Passwords do not coincide</string>
+    <string name="email_vacio">Email can not be empty</string>
+    <string name="email_exist">Email already exists</string>
+    <string name="email_fail">The email must be a valid address</string>
+    <string name="error_bd">Error in database. Try it again later</string>
+
+    <string name="wait_please">Please wait</string>
+    <string name="send_email_success">Email successfully sent</string>
+    <string name="send_email_fail">Unable to send email... </string><!--asegurese de proporcionar una dirección valida-->
+    <string name="register_success">Login successful, check your email from your android device to activate your account</string>
+    <string name="register_fail">Login unsuccessful, failed to send confirmation email. Try it again later</string>
+    <string name="register_fail_total">Log failed, unexpected error</string><!--RegisterActivity fallo bloque try catch-->
+
+
+    <!--avisos recuperar/restablecer password-->
+    <string name="success_restablecer">Check your email for reset your password.</string>
+    <string name="fail_restablecer">Failed to send mail to reset password. Try it again later.</string>
+    <string name="success_changed_password">Password has been successfully changed, now you can log in.</string>
+    <string name="repeat_new_empty">Repeat password can not be empty</string>
+
+
+    <!--nuevo-->
+    <!--avisos de perdida de conexión-->
+    <string name="conexion_perdida">Connection lost, you must re-link the device again</string>
+
+
+    <!--new password-->
+    <string name="restablecer_password_title">Restore password</string>
+    <string name="new_password">New password</string>
+    <string name="repeat_new_password">Repeat the new password</string>
+    <string name="guardar">Save</string>
+
+
+    <!--Change password-->
+    <string name="antigua_password">Current password</string>
+    <string name="cambiar">Change</string>
+    <string name="fail_password_actual">The new password do not coincide</string>
+    <string name="success_changed_password_perfil">Password change successful</string>
+
+    <!--Eliminar Terapeuta aviso-->
+    <string name="aviso_eliminar_terapeuta">Are you sure you wish to delete your account?, you will lose all your patients´ information and measurements</string>
+    <string name="success_delete_terapeuta">User %1$s has been successfully deleted</string>
+
+
+    <!--Mensajes de correo-->
+    <string name="email_subject_registro">Successful registration in Headpod</string>
+    <string name="email_subject_restablecer_password">Reset password in Headpod</string>
+    <string name="activar_cuenta">Activate account</string>
+    <string name="restabler_password">Restore password</string>
+
+
+    <string name="email_body_registro">Click on the next link to activate your account and choose the Headpod´s application: <br /></string>
+    <string name="email_body_restablecer_password">Click on the next link to restore password and choose the Headpod´s application: <br /></string>
+    <!--El enlace para el correo no se puede añadir desde aquí-->
+    <!--Los enlaces en el string funcionan con direcciones enteras (www.google.com) o si es un texview, hay que usar un metodo, buscarlo -->
+
+
+    <!--Titulo al abrir enlace-->
+    <string name="title_activity_activar_login">Headpod</string><!--activar cuenta-->
+    <string name="title_activity_restablecer_password">Headpod</string><!--restablecer password cuenta-->
+
+
+    <!--avisos Login-->
+    <string name="error_login">Login failed...</string>
+    <string name="error_email_no_existe">Mail does not exist, you must register before</string>
+    <string name="error_password_incorrecta">Password is wrong</string>
+    <string name="cuenta_no_validada">The account has not been validated, check your email to activate it.</string>
+    <string name="cuenta_activada">The account has been validated, now you can log in</string>
+
+
+    <!--Perfil de terapeuta-->
+
+    <string name="perfil">Profile</string>
+    <string name="titulo_perfil_terapeuta">Therapist´s profile</string>
+    <string name="alias">Alias (Ej:Therapist)</string><!--Nombre por defecto del terapeuta-->
+    <string name="change_password">Change password</string>
+    <string name="preferencias_perfil">Preferences:</string>
+
+    <string name="anadirImagen"><u>Add image</u></string>
+    <string name="borrarImagen"><u>Delete image</u></string>
+
+    <string name="tiempo_sesiones">Default time for measurement´ sessions</string>
+    <string name="desplegable_perfil_terapeuta">Deploy and choose</string>
+    <string name="cambiar_password"><u>Change password</u></string>
+    <string name="eliminar_cuenta"><u>Delete account</u></string>
+
+    <string name="sin_alias">Without alias</string>
+
+    <string name="exito_guardar">Successful changes</string>
+    <string name="fail_guardar">Failed to make changes, try it again later</string>
+
+
+    <!--Nombre de los botones-->
+    <string name="button_login">Log in</string>
+    <string name="button_medicion">Start measurement</string>
+    <string name="button_registrate">Sign up</string>
+    <string name="button_enviar">Send</string>
+    <string name="button_guardar">Save</string>
+    <!--<string name="button_cambiar">Cambiar</string>-->
+
+
+    <!--Menú-->
+    <string name="inicio">Start</string>
+    <string name="avatar">Real time data</string>
+    <string name="cambiar_terapeuta">Change therapist</string>
+    <string name="nuevo_paciente">New patient</string>
+    <string name="mis_pacientes">My patients</string>
+    <string name="desvincular_sensor">Sensor link up</string>
+    <string name="vincular_sensor">Sensor unlink</string>
+    <string name="preferencias">Preferences</string>
+    <string name="cambiar_idioma">Change languaje</string>
+    <string name="cerrar_app">Close App</string>
+    <string name="gestion_pacientes">Patient management</string>
+    <string name="conectividad_sensor">Connectivity sensor</string>
+
+
+    <!--Fragment Home-->
+    <string name="titulo_home">Start</string>
+    <string name="Seleccione_op">Choose a option</string>
+    <string name="op_avatar">Real time data</string>
+    <string name="op_inicar_medicion">Start measurement</string>
+    <string name="op_mis_pacientes">My patients</string>
+
+
+    <!--Fragment Cargando--><!--(NUEVO 21-12-2016)-->
+    <!--****************************************************************************************-->
+    <string name="cargando">Receiving data...</string>
+
+
+    <!--****************************************************************************************-->
+
+    <!--*************************************************************************************-->
+    <!--Fragment Perfil-->
+    <!--*************************************************************************************-->
+    <!--Tiempos de sesion de perfil-->
+    <string name="tiempo_op1">15 minutes</string>
+    <string name="tiempo_op2">30 minutes</string>
+    <string name="tiempo_op3">45 minutes</string>
+    <string name="tiempo_op4">60 minutes</string>
+    <string name="tiempo_op5">120 minutes</string>
+    <!--*************************************************************************************-->
+
+    <!--*************************************************************************************-->
+    <!--Fragment Medición-->
+    <!--*************************************************************************************-->
+    <string name="inicar_medicion">Start measurement</string>
+    <string name="medicion_con_hp">With Headpod</string>
+    <string name="medicion_sin_hp">Without Headpod</string>
+    <string name="ver_foto_ejemplo">View photo with an example</string>
+    <!--*************************************************************************************-->
+
+
+    <!--*************************************************************************************-->
+    <!--Fragment Medición con y sin headpod-->
+    <!--*************************************************************************************-->
+    <string name="aceptar">Acept</string>
+    <string name="cancelar">Cancel</string>
+    <string name="uno">1.-</string>
+
+    <string name="dos">2.-</string>
+
+    <string name="uno_medicion_comparativa">Adjust the sensor behind the ear with the hook (view photo).
+        If you can not use the hook, secure the sensor with a band aid (view photo).</string>
+
+    <string name="fije_sensor">Fix the sensor</string>
+
+    <!--OJoOoOoO: Los colores del texto lo cambiamos en tiempo de ejecucion con spannable-->
+    <!--Este lo usamos para buscar con indexof...el texto de anterior y recortar "dfsd"-->
+    <string name="parentisis_ver_foto">(view photo)</string>
+
+    <string name="dos_medicion_comparativa">Select the time you want to measure (Optional)</string>
+
+    <string name="tres">3.-</string>
+    <string name="tres_medicion_comparativa">Select the patient with whom you are going to perform the measurement.
+        If there is none, create a patient and select it.
+    </string>
+
+    <string name="tres_select_paciente"><b><u>Select patient</u></b></string>
+    <string name="tres_paciente_seleccionado">The selected patient is </string>
+
+
+    <string name="cuatro">4.-</string>
+    <string name="cuatro_medicion_comparativa">Make sure that the head is in neutral position and press "MEASURE"</string>
+    <!--Este lo usamos para buscar con indexof...el texto de anterior y recortar-->
+    <string name="cabeza">Head</string>
+    <string name="neutral">Neutral</string>
+
+
+    <!--*************************************************************************************-->
+    <!-- Botones/nombres de las pestañas  -->
+    <!--*************************************************************************************-->
+    <string name="terapeuta_sin_asignar">Unassigned therapist</string>
+    <string name="paciente_sin_asignar">Unassigned patient</string>
+    <string name="guardar_terapeuta">Save therapist</string>
+    <string name="guardar_paciente">Save patient</string>
+
+    <string name="estadisticas">Statistics</string>
+    <string name="pestana_en_tiempo_real">In real time</string>
+    <!--*************************************************************************************-->
+
+
+    <!--*************************************************************************************-->
+
+    <!--*************************************************************************************-->
+    <!--Fragment Medición sin headpod-->
+    <!--*************************************************************************************-->
+    <string name="btn_medir">Measure</string>
+
+
+    <!--*************************************************************************************-->
+    <!--*************************************************************************************-->
+    <!--Fragment Medición con headpod-->
+    <!--*************************************************************************************-->
+    <string name="uno_con_headpod">Place headpod and sensor</string>
+
+
+    <!--*************************************************************************************-->
+    <!--*************************************************************************************-->
+
+
+    <!--*************************************************************************************-->
+    <!--Fragment Medición sin headpod-->
+    <!--*************************************************************************************-->
+    <string name="select_avatar_2d">Avatar in 2D</string>
+    <string name="select_avatar_3D">Avatar in 3D</string>
+
+
+    <!--*************************************************************************************-->
+    <!--*************************************************************************************-->
+
+
+    <!--*************************************************************************************-->
+    <!--*************************************************************************************-->
+    <!--Fragment Avatar-->
+    <!--*************************************************************************************-->
+    <string name="titulo_datos_en_tiempo_real">Real time data</string>
+    <string name="medicion_en_tiempo_real">Real time measurement</string>
+    <string name="convulsiones">C=</string>
+    <string name="velocidad_media">Vm=</string>
+
+
+    <!--Framento-botones-avatar-->
+    <string name="btn_avatar_izquierda_inicio">Start</string>
+    <string name="btn_avatar_derecha_reset">Reset</string>
+
+    <string name="btn_avatar_izquierda_reanudar">Resume</string>
+    <string name="btn_avatar_derecha_parar">Stop</string>
+
+
+    <!--*************************************************************************************-->
+    <!--*************************************************************************************-->
+    <!--opciones-->
+
+    <string name="title_activity_login">Sign in</string>
+
+    <!--EditText para tiempo-->
+    <plurals name="dias">
+        <item quantity="one">day</item>
+        <item quantity="other">days</item>
+    </plurals>
+
+    <plurals name="horas">
+        <item quantity="one">hour</item>
+        <item quantity="other">hours</item>
+    </plurals>
+
+    <string name="minutos">minutes</string>
+    <string name="min">min</string>
+    <string name="menos">-</string>
+
+    <string name="otro_tiempo"><u>Select /nother time</u></string>
+    <string name="tiempo_max">Time: ∞ \n(Max. allowed) </string>
+    <string name="tiempo_dos_puntos">Time: </string>
+
+    <string name="indefinido">∞</string><!--indefinido-->
+
+
+    <string name="establecer_tiempo">Set time  \n(Days : Hours : Minutes)</string><!--titulo de ventana emergente para tiempo-->
+
+    <!--Mis pacientes-->
+    <!--*****************************************************************************-->
+    <!--*****************************************************************************-->
+    <string name="buscar_paciente">Search patient</string>
+    <string name="nombre">Name</string>
+    <string name="apellido">Surname</string>
+    <string name="edad">Age</string>
+    <string name="selecciona_ano_nacimiento">Select year of birth:</string>
+    <string name="peso">Weigth</string>
+    <string name="anadir">Add</string>
+    <string name="modificar">Modify</string>
+    <string name="eliminar">Delete</string>
+    <string name="diagnostico"><u>Diagnostic:</u></string>
+
+    <string name="select_aviso_paciente">It´s necessary <b><u>to select a patient</u></b> to perform the measurement. </string>
+
+    <string name="un_paciente">one patient</string>
+
+
+    <string name="kg">Kg</string>
+
+    <plurals name="anos">
+        <item quantity="one">year</item>
+        <item quantity="other">years</item>
+
+    </plurals>
+
+
+    <string name="mediciones">Measurements</string>
+
+    <string name="ficha">File</string>
+
+    <string name="sexo">Sex: </string>
+    <string name="hombre">Man</string>
+    <string name="mujer">Woman</string>
+
+
+    <!--Avisos-->
+    <string name="nombre_vacio">Name can not be empty</string>
+    <string name="apellido_vacio">Surname can not be empty</string>
+    <string name="edad_vacia">Age must not be empty</string>
+    <string name="peso_vacio">Weigth can not be empty</string>
+    <string name="paciente_fail">The patient can not be created, fill in the fields correctly</string>
+    <string name="paciente_success">Patient created successfully</string>
+    <string name="paciente_modify">Patient modified successfully</string>
+    <string name="paciente_deleted">Patient deleted successfully</string>
+    <string name="lista_mis_pacientes_vacia">There are no patients.</string>
+    <string name="find_pacientes_fail">Patient´ search has not been successful</string>
+    <string name="edad_fail">Error, date of birth can not be greater than current</string>
+
+    <!--Eliminar paciente-->
+    <string name="aviso_eliminar_paciente">Are you sure to delete the patient?, you will lose all the data´s information and measurements</string>
+    <string name="success_delete_paciente">The patient %1$s has been successfully removed</string>
+    <!--*****************************************************************************-->
+    <!--*****************************************************************************-->
+
+
+    <!--*****************************************************************************-->
+    <!--Mis mediciones-->
+    <!--*****************************************************************************-->
+
+    <string name="filtrar_por_fecha">Filter </string>
+    <string name="desde">Since</string>
+    <string name="hasta">Until</string>
+    <string name="fecha_xx">dd/mm/yyyy</string>
+
+
+    <string name="select_dos_mediciones">Select two measurements if you want to compare them</string>
+
+    <string name="ver">View</string>
+    <string name="tipo">Type</string>
+    <string name="duracion">Duration</string>
+    <string name="fecha">Date</string>
+    <string name="comparar">Compare</string>
+
+
+    <!--Avisos-->
+
+    <string name="sin_mediciones">No measurements.</string>
+
+    <!--*****************************************************************************-->
+
+
+    <!--*****************************************************************************-->
+    <!--Diagnostico-->
+    <!--**********************************************************************************-->
+    <string name="control_cefalico">Cephalic control:</string>
+    <!--*******-->
+    <string name="bueno">Good</string>
+    <string name="regular">Regular</string>
+    <string name="malo">Bad</string>
+    <string name="ninguno">None</string>
+    <!--*******-->
+
+
+    <string name="tono_muscular">Muscular tone:</string><!--Tono Muscular-->
+    <!--*******-->
+    <string name="hipotonia_1">General hypotonia</string><!--Hipotonia general-->
+    <string name="hipotonia_2">Axial hypotonia</string><!--Hipotonía axial-->
+    <string name="hipotonia_3">Dystonia, with trunk hypotonia</string><!--Distonía, con hipotonía de tronco-->
+    <string name="hipotonia_4">Spastic Tetraparesis</string><!--Tetraparesia espástica-->
+    <string name="hipotonia_5">Tetraparesis with limited cervical movements</string><!--Tetraparesia con limitación \nde movimientos cervicales-->
+    <!--Ojo con el string a mostrar-->
+    <!--*******-->
+
+
+    <!--*****************************************************************************-->
+
+
+    <!--BLE-->
+    <!--**********************************-->
+    <!--Sensor-->
+    <string name="headpod_v1">Headpod_v1</string><!--Lo usamos solo para las pruebas--><!--MAC -->
+    <string name="headpod_v2">Headpod_v2</string><!--Lo usamos solo para las pruebas--><!--MAC: 00:00:CA:00:00:03-->
+    <string name="headpod_v3">HEADPOD</string><!--Este sera el nombre de la version3 y el que realmente se usara de normal en todos los casos--><!--MAC: 80:EA:CA:00:00:03-->
+    <string name="sensor_buscando">Searching sensor...</string>
+    <string name="sensor_acerque">Move the sensor near to the device</string>
+
+    <plurals name="sensores_encontrado">
+        <item quantity="one">Sensor found</item>
+        <item quantity="other">Sensors found</item>
+
+    </plurals>
+
+    <plurals name="lista_sensores">
+        <item quantity="one">Select the sensor:</item>
+        <item quantity="other">Select one of the next sensors:</item>
+    </plurals>
+
+
+    <string name="sensor_no_encontrado">Sensor not found</string>
+    <string name="error_ble_sensor">Error, can not find devices</string>
+    <string name="sensor_dos_toques">Press Double-tap on the sensor to confirm the synchronization</string>
+
+
+    <string name="sensor_debe_activar_bluetooth">You must activate and make visible the bluetooth </string>
+    <string name="sensor_debe_visible_bluetooth">You must make visible the bluetooth </string>
+
+    <string name="no_found_sensor">Sensors not found</string>
+
+    <string name="unknown_device">Unknown device</string>
+    <string name="ble_not_supported">This device does not support bluetooth low energy</string><!--BLE is not supported-->
+    <string name="imposible_buscar_sensor">Impossible to search the sensor</string>
+    <string name="ble_supported">Android device compatible with BLE</string>
+    <string name="error_bluetooth_not_supported">Bluetooth not supported.</string>
+
+
+    <string name="api_mayor_21_permisos_localizacion">Location permissions are required to show nearby Bluetooth devices</string><!--Location access is required to show Bluetooth devices nearby.-->
+
+    <string name="sensor_no_habilitado">"You have not allowed the use of bluetooth, it will not be possible to link the sensor"</string>
+    <string name="sincronizando_sensor">Synchronizing sensor</string>
+
+
+    <string name="sincronizado_sensor">Sensor synchronized</string>
+
+    <string name="sensor_sincronizado">Sensor synchronized</string>
+    <string name="sensor_sincronizado_fail">Failed to synchronized...</string>
+
+    <!--**********************************-->
+
+
+    <!--Informe-->
+    <!--*****************************************************************************************-->
+
+    <string name="inf_report">Report</string>
+    <string name="inf_hora">Hour</string>
+    <string name="inf_duracion">Duration</string>
+
+    <string name="inf_muy_malo">Very poor</string>
+    <string name="inf_malo">Poor</string>
+    <string name="inf_favorable">In favor</string>
+    <string name="inf_bueno">Good</string>
+
+    <string name="inf_poor">Poor</string>
+    <string name="inf_normal">Fair</string>
+
+
+    <string name="inf_control_mov"><b>Motion Control</b></string>
+    <string name="inf_porcentaje_tiempo"><b>Percentage of time in each range</b></string>
+    <string name="inf_ranks"><b>Ranges</b></string>
+
+    <string name="inf_inclinacion"><b> Inclination</b></string>
+    <string name="inf_flexion"><b> Flexion </b></string>
+    <string name="inf_rotacion"><b> Rotation </b></string>
+
+    <!--*****************************************************************************************-->
+
+    <!--Informe comparativo-->
+    <!--*****************************************************************************************-->
+
+    <string name="inf_comparative_report">Comparative report</string>
+    <string name="inf_comparative_session">Comparison of measures</string>
+    <string name="inf_comp_sin_hp">Without headpod</string>
+    <string name="inf_comp_con_hp">With headpod</string>
+    <string name="inf_comp_control">Control</string>
+
+
+    <!--*****************************************************************************************-->
+    <string name="aceleracion_X">Aceleration x:</string>
+    <string name="aceleracion_Y">Aceleration Y:</string>
+    <string name="aceleracion_Z">Aceleration Z:</string>
+
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Sign in or register</string>
+    <string name="action_sign_in_short">Sign in</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email completions."</string>
+    <string name="title_activity_register">Sign in</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="title_activity_home">HomeActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="action_settings">Settings</string>
+    <string name="title_activity_login_activity_borrar">Sign in</string>
+
+</resources>

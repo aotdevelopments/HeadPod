@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingStart="@dimen/activity_horizontal_margin"
+    android:paddingEnd="@dimen/activity_horizontal_margin"
+    android:paddingTop="5dp"
+    android:layoutDirection="ltr"
+
+    android:id="@+id/spinner_txt"
+    style="@style/spinnerItemStyle"
+    android:singleLine="false"
+    android:ellipsize="marquee"
+
+    android:textColor="@color/ColorSecundadrio"/><!--Single line a false para admitir mas de una-->
+
+
+<!--
+<TextView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@android:id/text1"
+    style="?android:attr/spinnerDropDownItemStyle"
+    android:singleLine="false"
+    android:layout_height="wrap_content"
+    android:layout_width="match_parent"
+    android:ellipsize="none"
+
+    android:textColor="@color/ColorSecundadrio"
+
+    />
+-->
+
+
+

@@ -1,0 +1,269 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contenedor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#ffffff"
+    tools:context="com.siestasystemheadpod.headpodv10.LoginActivity"
+
+
+    >
+
+
+    <ImageView
+        android:contentDescription="@string/descripcion_logo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/imageLogo"
+        android:adjustViewBounds="true"
+        android:scaleType="centerCrop"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:src="@drawable/logo_headpod_con_leyenda" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:text="@string/login"
+        android:textColor="@color/ColorSecundadrio"
+        android:textSize="@dimen/text_size_title"
+        android:id="@+id/tituloInicial"
+        android:layout_below="@+id/imageLogo"
+        android:layout_marginTop="16dp"
+        android:gravity="center_horizontal"
+
+        android:layout_alignParentStart="true"
+
+        android:layout_alignParentEnd="true" />
+
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tituloInicial"
+        android:fadeScrollbars="false"
+
+        android:id="@+id/scrollView">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutPadre"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingLeft="@dimen/activity_horizontal_margin"
+        android:paddingRight="@dimen/activity_horizontal_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+
+
+        android:weightSum="1">
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:gravity="start"
+
+
+
+            android:id="@+id/linearLayout4">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textEmailAddress"
+                android:textSize="@dimen/text_size_subtitle"
+                android:ems="10"
+                android:hint="@string/email"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/email"
+          /><!--android:textColorHint="@color/colorPrimary"-->
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="16dp"
+            android:gravity="start"
+            android:id="@+id/linearLayout5">
+
+            <EditText
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPassword"
+                android:ems="10"
+                android:textSize="@dimen/text_size_subtitle"
+                android:id="@+id/password"
+                android:hint="@string/password"
+                android:textColor="@color/colorPrimary"
+              /><!--android:textColorHint="@color/colorPrimary"-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:gravity="start"
+
+
+            android:id="@+id/linearLayout6">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:gravity="center"
+                android:id="@+id/olvidaste"
+                android:text="@string/forget_password"
+                android:textSize="@dimen/text_size_standard"
+
+
+
+                android:onClick="viewRememberPassword"
+
+                android:textColor="@color/txt_efectos"
+
+                android:background="@color/blanco"
+                />
+
+
+        </LinearLayout>
+
+
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/linearLayout8"
+            android:layout_marginTop="10dp"
+          >
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/no_tienes_usuario"
+                android:textSize="@dimen/text_size_subtitle"
+                android:id="@+id/nuevo_registro"
+                android:gravity="center"
+                android:onClick="viewRegister"
+                android:textColor="@color/txt_efectos"
+                android:background="@color/blanco"
+                 />
+
+
+        </LinearLayout>
+
+
+
+
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+
+
+
+            >
+
+            <ImageView
+                android:contentDescription="@string/descripcion_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView9"
+                android:src="@drawable/btn_efectos"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:onClick="attemptLogin"
+
+
+
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:background="@drawable/txt_background_efecto"
+                android:id="@+id/sesion_login"
+
+                android:text="@string/button_login"
+                android:textColor="@color/colorPrimary"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/text_size_standard"
+
+
+                />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+
+                android:id="@+id/avisos"
+                android:text="Avisoss"
+                android:textColor="@color/rojo_ocuro"
+                android:layout_gravity="center_horizontal"
+                android:textSize="@dimen/text_size_standard"
+                android:visibility="invisible"
+
+
+                />
+
+        </LinearLayout>
+
+
+
+
+
+
+    </LinearLayout>
+
+
+
+
+
+
+    </ScrollView>
+
+
+
+
+</RelativeLayout>
+
+
+<!--Para scroll, mostrar siempre derecha, api 23
+
+
+    android:scrollIndicators="right"-->
+    <!--   android:fadeScrollbars="false para que apararezca la barra a la derecha"-->
+
+<!--   android:enabled="true"
+                android:textIsSelectable="true"
+                android:focusable="true"
+                android:longClickable="true"-->

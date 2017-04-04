@@ -1,0 +1,423 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contenedor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="#ffffff"
+    tools:context=".fragments.pacientes.AnadirPacienteFragment">
+
+
+    <!--El borde de pestaña se lo doy en AllAvatarMedicionFragment-->
+    <RelativeLayout
+        android:id="@+id/layout_btnIzquierdaAsignancion"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </RelativeLayout>
+    <!--El borde de pestaña se lo doy en AllAvatarMedicionFragment-->
+
+
+
+    <RelativeLayout
+        android:id="@+id/layout_btnDerechaAsignacion"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_marginBottom="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </RelativeLayout>
+
+
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+
+        android:layout_below="@id/layout_btnIzquierdaAsignancion"
+        android:fadeScrollbars="false"
+        android:id="@+id/scrollView">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content"
+        android:id="@+id/linearLayoutPadre"
+        >
+
+        <ImageView
+            android:id="@+id/imgPaciente"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:adjustViewBounds="true"
+            android:scaleType="centerCrop"
+
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="@string/descripcion_img_buscar_paciente"
+            android:layout_width="110dp"
+            android:layout_height="150dp"
+            android:src="@drawable/monigote_verde_perfil"
+           />
+
+        <TextView
+            android:id="@+id/txtAnadirBorrarImg"
+
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceMedium"
+            android:text="@string/anadirImagen"
+            android:textColor="@color/ColorSecundadrio"
+            android:textSize="@dimen/text_size_subtitle"
+
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="10dp"
+
+            />
+
+
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            >
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_standard"
+                android:hint="@string/nombre"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/editNombrePaciente"/>
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_standard"
+                android:hint="@string/apellido"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/editApellidoPaciente"/>
+
+        </LinearLayout><!--Redimencionarmos el ancho los editText en tiempo de ejecución-->
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            >
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="@dimen/text_size_standard"
+                android:gravity="center_horizontal"
+                android:focusable="false"
+                android:enabled="true"
+                android:hint="@string/edad"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/editEdadPaciente"/>
+            <TextView
+                android:id="@+id/txtAnos"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_standard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="numberDecimal"
+                android:textSize="@dimen/text_size_standard"
+
+                android:gravity="center_horizontal"
+                android:hint="@string/peso"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/editPesoPaciente"/>
+
+            <TextView
+                android:id="@+id/txtPeso"
+                android:textColor="@color/colorPrimary"
+
+                android:text="@string/kg"
+                android:textSize="@dimen/text_size_standard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout><!--Redimencionarmos el ancho los editText en tiempo de ejecución-->
+
+
+        <LinearLayout
+            android:id="@+id/linearLayout3"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:paddingTop="@dimen/activity_vertical_margin"
+            android:paddingBottom="@dimen/activity_vertical_margin"
+            >
+
+            <TextView
+                android:id="@+id/txtSexo"
+                android:textColor="@color/ColorSecundadrio"
+                android:textSize="@dimen/text_size_standard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/sexo"
+                android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                />
+
+            <RadioGroup xmlns:android="http://schemas.android.com/apk/res/android"
+                android:id="@+id/opciones_sexo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <RadioButton
+                    android:id="@+id/radio_masculino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:layout_marginEnd="16dp"
+                    android:checked="true"
+                    android:text="@string/hombre"/>
+
+                <RadioButton
+                    android:id="@+id/radio_femenino"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/colorPrimary"
+                    android:checked="false"
+                    android:text="@string/mujer" />
+            </RadioGroup>
+
+
+
+
+        </LinearLayout><!--Redimencionarmos el ancho los editText en tiempo de ejecución-->
+
+
+
+    <TextView
+        android:id="@+id/txtDiagnostico"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/ColorSecundadrio"
+        android:text="@string/diagnostico"
+        android:textSize="@dimen/text_size_standard"
+        android:gravity="start"
+        android:paddingEnd="@dimen/activity_horizontal_margin"
+        android:paddingStart="@dimen/activity_horizontal_margin"
+        />
+
+
+    <!--    android:layout_alignStart="@id/linearLayout1"-->
+
+    <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+
+            android:id="@+id/linearLayoutDiagnostico1"
+            >
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtControlCefalico"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/control_cefalico"
+            android:textSize="@dimen/text_size_standard"
+            />
+
+            <Spinner
+                style="@style/spinner_style"
+                android:id="@+id/spinnerControlCefalico"/>
+
+
+    </LinearLayout>
+
+    <!--    android:layout_alignStart="@id/linearLayout1"-->
+
+        <TextView
+            android:paddingStart="@dimen/activity_horizontal_margin"
+            android:paddingEnd="@dimen/activity_horizontal_margin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/txtTonoMuscular"
+            android:textColor="@color/colorPrimary"
+            android:text="@string/tono_muscular"
+            android:textSize="@dimen/text_size_standard"
+            />
+
+        <Spinner
+            style="@style/spinner_style"
+            android:id="@+id/spinnerTonoMuscular"
+            />
+
+
+
+
+
+
+
+    <ImageView
+        android:contentDescription="@string/descripcion_button"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/btnAnadirPaciente"
+        android:src="@drawable/btn_efectos"
+        android:layout_gravity="center_horizontal"
+        />
+
+    <TextView
+        android:id="@+id/txtAnadirPaciente"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/colorPrimary"
+        android:text="@string/anadir"
+        android:layout_gravity="center_horizontal"
+        android:textSize="@dimen/text_size_standard"
+
+        />
+    </LinearLayout>
+    </ScrollView>
+
+
+</RelativeLayout>
+
+
+<!--
+
+
+        <RelativeLayout
+            android:orientation="horizontal"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/relativeLayout1"
+            android:layout_gravity="start"
+            android:layout_marginStart="@dimen/activity_horizontal_margin"
+            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+
+
+            android:background="@drawable/spinner_select_normal"
+            >
+
+            <Spinner
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+
+                android:popupBackground="@color/blanco"
+                android:layout_gravity="center"
+                android:background="@android:color/transparent"
+                android:gravity="center"
+                android:drawSelectorOnTop="true"
+                android:id="@+id/spinnerControlCefalico"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imageView10"
+                android:src="@mipmap/drop"
+                android:adjustViewBounds="true"
+                android:scaleType="centerCrop"
+
+                android:layout_alignParentTop="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+
+-->
+
+
+
+    <!--    android:layout_alignStart="@id/linearLayout1"-->
+
+    <!--  <LinearLayout
+            android:id="@+id/linearLayout1"
+            android:orientation="horizontal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+
+            android:layout_gravity="center"
+            >
+
+
+            <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+                android:id="@+id/discreteEdad"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                app:dsb_min="1"
+                app:dsb_max="120"
+                app:dsb_value="15"
+                app:dsb_indicatorTextAppearance="@style/CustomFloaterTextAppearance"
+                />
+
+            <SeekBar
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/seekBar"
+                android:layout_weight="1" />
+
+            <EditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:inputType="number"
+                android:textSize="@dimen/text_size_standard"
+                android:ems="6"
+                android:gravity="center_horizontal"
+                android:hint="@string/edad"
+                android:textColor="@color/colorPrimary"
+                android:id="@+id/editEdadPaciente"/>
+            <TextView
+                android:id="@+id/txtAnos"
+                android:textColor="@color/colorPrimary"
+                android:text="sera años"
+                android:textSize="@dimen/text_size_standard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                />
+
+        </LinearLayout>-->
+
+    <!-- <LinearLayout
+         android:id="@+id/linearLayout3"
+         android:orientation="horizontal"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_gravity="center"
+
+         >
+         <org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+             android:id="@+id/discretePeso"
+             android:layout_width="150dp"
+             android:layout_height="wrap_content"
+
+             app:dsb_min="1"
+             app:dsb_max="200"
+             app:dsb_value="45"
+             app:dsb_indicatorTextAppearance="@style/CustomFloaterTextAppearance"
+             />-modificar anchura en TE-
+
+     </LinearLayout>-->

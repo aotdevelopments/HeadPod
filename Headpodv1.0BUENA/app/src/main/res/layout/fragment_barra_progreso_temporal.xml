@@ -1,0 +1,52 @@
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/contenedor"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:gravity="center_horizontal"
+android:orientation="vertical"
+
+android:paddingLeft="2dp"
+android:paddingRight="2dp"
+android:background="#ffffff"
+tools:context=".fragments.BarraProgresoTemporalFragment"
+    android:weightSum="1">
+
+    <!--Para cambiar el color -->
+    <!--http://stackoverflow.com/questions/5745814/android-change-horizonal-progress-bar-color-->
+
+    <!--style="@style/barra_progeso_horizontal"    style="@android:style/Widget.ProgressBar.Horizontal"-->
+    <ProgressBar
+
+        style="@android:style/Widget.ProgressBar.Horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:progressDrawable="@drawable/barra_progress_horizontal"
+        android:id="@+id/progressBarTime" /><!--style="@android:style/Widget.Holo.Light.ProgressBar.Horizontal"--><!--   style="@android:style/Widget.ProgressBar.Horizontal"-->
+    <TextView
+        android:id="@+id/tiempo_avanzado"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        android:text="00:00:00"
+        android:textColor="@color/blanco"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+        /><!--El tiempo del texto solo es para ver como queda en Te, se cambiar-->
+
+    <TextView
+        android:id="@+id/tiempo_maximo"
+
+        android:paddingEnd="5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="00:01:00"
+        android:textColor="@color/blanco"
+        android:layout_toEndOf="@id/txtConvulsiones"
+        android:textAppearance="?android:attr/textAppearanceSmall"
+
+        /><!--El tiempo del texto solo es para ver como queda en Te, se cambiar-->
+
+
+</RelativeLayout>

@@ -1,0 +1,3342 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contenedor"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    android:background="#ffffff"
+    tools:context=".fragments.InformeComparativoFragment"
+    >
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+    <LinearLayout
+        android:id="@+id/linearLayoutPadre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        >
+
+
+
+        <!--FECHA, HORA Y DURACIÓN-->
+        <!--****************************************************************************************-->
+        <!--CONTENEDOR CABECERA FECHA Y HORA -->
+        <!--***********************************************************************-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="5dp"
+            >
+
+            <!--TITULO-->
+            <!--***********************************************************************-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.80"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                android:background="@color/data_fondo"
+                android:layout_marginEnd="5dp"
+                >
+                <TextView
+                    android:id="@+id/txtTituloInformeComparativo"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_standard"
+                    android:text="@string/inf_comparative_session"
+                    android:textColor="@color/ColorSecundadrio"
+                    />
+
+            </LinearLayout>
+            <!--FIN TITULO-->
+            <!--***********************************************************************-->
+
+            <!--TITULO CONTROL-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.20"
+                android:background="@color/data_fondo"
+                android:layout_gravity="center"
+                android:gravity="center_horizontal"
+                >
+                <TextView
+                    android:id="@+id/txtTituloControl"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_standard"
+                    android:text="@string/inf_comp_control"
+                    android:textColor="@color/ColorSecundadrio"
+                    />
+
+
+            </LinearLayout>
+            <!--FIN CONTENEDOR RESULTADO-->
+
+
+        </LinearLayout>
+        <!--FIN CONTENEDOR CABEZERA FECHA Y HORA -->
+        <!--***********************************************************************-->
+
+        <!--CONTENEDOR FECHA Y HORA SIN HEADPOD-->
+        <!--***********************************************************************-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/data_fondo"
+
+            >
+
+            <!--CONTENEDOR CABEZA-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.10"
+                android:layout_gravity="center"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/informe_comparativo_cabeza_sin_hp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:background="@color/data_fondo"
+                    />
+            </LinearLayout>
+            <!--FIN CONTENEDOR CABEZA-->
+
+            <!--CONTENEDOR FECHA Y HORA-->
+            <!--***********************************************************************-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.65"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@color/data_fondo"
+                android:layout_marginEnd="5dp"
+                >
+
+                <!--FECHA-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:id="@+id/txtXXDia"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_standard"
+                        android:text="XX"
+                        android:textColor="@color/ColorSecundadrio"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtXXMes"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_standard"
+                        android:text="/XX/"
+                        android:textColor="@color/ColorSecundadrio"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtXXAno"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_standard"
+                        android:text="XXXX"
+                        android:textColor="@color/ColorSecundadrio"
+                        />
+
+
+                </LinearLayout>
+
+
+                <!--hORA-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:id="@+id/txtHora"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:textSize="@dimen/text_size_standard"
+                        android:text="@string/inf_hora"
+                        android:textColor="@color/colorPrimary"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtXXHora"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_standard"
+                        android:text="XX:XX"
+                        android:textColor="@color/colorPrimary"
+                        />
+
+
+
+
+                </LinearLayout>
+
+
+                <!--Duracion-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/txtDuracion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:textSize="@dimen/text_size_standard"
+                        android:text="@string/inf_duracion"
+                        android:textColor="@color/colorPrimary"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtXXDuracion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_standard"
+                        android:text="XX:XX"
+                        android:textColor="@color/ColorSecundadrio"
+                        />
+
+
+                </LinearLayout>
+
+
+            </LinearLayout>
+            <!--FIN CONTENEDOR FECHA Y HORA-->
+            <!--***********************************************************************-->
+
+            <!--CONTENEDOR RESULTADO-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.20"
+                android:background="@color/data_fondo"
+                android:layout_gravity="center"
+                android:gravity="center"
+                >
+
+                    <LinearLayout
+                        android:id="@+id/result_shp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/data_poor"
+                        android:orientation="horizontal"
+                        android:textColor="@color/ColorSecundadrio"
+                        >
+
+                        <TextView
+                            android:id="@+id/txt_result_shp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/inf_poor"
+                            android:textSize="@dimen/text_size_standard"
+
+                            />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            <!--FIN CONTENEDOR RESULTADO-->
+
+
+        </LinearLayout>
+        <!--FIN CONTENEDOR FECHA Y HORA SIN HEADPOD-->
+        <!--***********************************************************************-->
+
+        <!--CONTENEDOR FECHA Y HORA CON HEADPOD-->
+        <!--***********************************************************************-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:background="@color/data_fondo"
+
+            >
+
+            <!--CONTENEDOR CABEZA-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.10"
+                android:layout_gravity="center"
+                android:gravity="center"
+                >
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/informe_comparativo_cabeza_con_hp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="centerCrop"
+                    android:background="@color/data_fondo"
+                    />
+            </LinearLayout>
+            <!--FIN CONTENEDOR CABEZA-->
+
+            <!--CONTENEDOR FECHA Y HORA-->
+            <!--***********************************************************************-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.65"
+                android:orientation="vertical"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:background="@color/data_fondo"
+                >
+
+
+                <!--Fecha-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <TextView
+                        android:id="@+id/txtXXDia_chp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_standard"
+                        android:text="XX"
+                        android:textColor="@color/ColorSecundadrio"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtXXMes_chp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_standard"
+                        android:text="/XX/"
+                        android:textColor="@color/ColorSecundadrio"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtXXAno_chp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_standard"
+                        android:text="XXXX"
+                        android:textColor="@color/ColorSecundadrio"
+                        />
+                </LinearLayout>
+
+
+
+                <!--Hora-->
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:id="@+id/txtHora_chp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:textSize="@dimen/text_size_standard"
+                        android:text="@string/inf_hora"
+                        android:textColor="@color/colorPrimary"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtXXHora_chp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_standard"
+                        android:text="XX:XX"
+                        android:textColor="@color/colorPrimary"
+                        />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+
+                    <TextView
+                        android:id="@+id/txtDuracion_chp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="2dp"
+                        android:layout_marginEnd="2dp"
+                        android:textSize="@dimen/text_size_standard"
+                        android:text="@string/inf_duracion"
+                        android:textColor="@color/colorPrimary"
+                        />
+
+                    <TextView
+                        android:id="@+id/txtXXDuracion_chp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_standard"
+                        android:text="XX:XX"
+                        android:textColor="@color/ColorSecundadrio"
+                        />
+
+
+                </LinearLayout>
+
+
+
+
+
+
+
+
+            </LinearLayout>
+            <!--FIN CONTENEDOR FECHA Y HORA-->
+            <!--***********************************************************************-->
+
+            <!--CONTENEDOR RESULTADO-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.20"
+                android:background="@color/data_fondo"
+                android:layout_gravity="center"
+                android:gravity="center"
+                >
+                    <LinearLayout
+                        android:id="@+id/result_chp"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/data_poor"
+                        android:orientation="horizontal"
+                        android:textColor="@color/ColorSecundadrio"
+                        >
+
+                        <TextView
+                            android:id="@+id/txt_result_chp"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:text="@string/inf_poor"
+                            android:textSize="@dimen/text_size_standard"
+
+                            />
+                    </LinearLayout>
+            </LinearLayout>
+            <!--FIN CONTENEDOR RESULTADO-->
+
+
+        </LinearLayout>
+        <!--FIN CONTENEDOR FECHA Y HORA CON HEADPOD-->
+        <!--***********************************************************************-->
+        <!--****************************************************************************************-->
+
+
+
+        <!--CONTENEDOR PORCENTAJES DE RANGOS-->
+        <LinearLayout
+            android:id="@+id/contenedorPorcentajeRangos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/data_fondo"
+            android:orientation="vertical"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            >
+            <TextView
+                android:id="@+id/txtTituloPorcentajesRangos"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:textColor="@color/ColorSecundadrio"
+                android:text="@string/inf_porcentaje_tiempo"
+                android:textSize="@dimen/text_size_subtitle"
+                android:paddingStart="@dimen/activity_horizontal_margin"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                />
+
+
+
+
+            <!--Resultados sin headpod-->
+            <!--*******************************************************-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <!--Cabeza-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.12"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginStart="5dp"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/informe_comparativo_cabeza_sin_hp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:background="@color/data_fondo"
+                        android:paddingBottom="20dp"
+                        />
+                </LinearLayout>
+
+                <!--RESULTADOS-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.95"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    >
+
+                    <!--BARRA HORIZONTAL SIN HEADPOD-->
+                    <!--NOTA : No dar menos del 8% de ancho para que quepan los numeros-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        >
+
+
+                        <LinearLayout
+                            android:id="@+id/barraPorcentajeRangoGoood"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.20"
+                            android:background="@color/data_leyenda_porcentaje_good"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/txtPorcentajeRangoGood"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="20%"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/barraPorcentajeRangoFair"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.08"
+                            android:background="@color/data_leyenda_porcentaje_fair"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/txtPorcentajeRangoFair"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="8%"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/barraPorcentajeRangoBad"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.50"
+                            android:background="@color/data_leyenda_porcentaje_bad"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/txtPorcentajeRangoBad"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="50%"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/barraPorcentajeRangoVerBad"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.22"
+                            android:background="@color/data_leyenda_porcentaje_very_bad"
+                            android:orientation="horizontal" >
+
+                            <TextView
+
+                                android:id="@+id/txtPorcentajeRangoVeryBad"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="22%"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--FIN BARRA HORIZONTAL SIN HEADPOD-->
+
+                    <!--CORCHETES SIN HEADPOD-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        >
+                        <LinearLayout
+                            android:id="@+id/corchete_inferior_porcentaje_good"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/activity_vertical_margin"
+                            android:layout_weight="0.28"
+
+                            android:background="@drawable/border_inf_porcentaje_good"
+                            android:orientation="horizontal"
+                            >
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/corchete_inferior_porcentaje_bad"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/activity_vertical_margin"
+                            android:layout_weight="0.72"
+
+                            android:background="@drawable/border_inf_porcentaje_bad"
+                            android:orientation="horizontal"
+                            >
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--FIN CORCHETES SIN HEADPOD-->
+
+                    <!--RESULTADO DE CORCHETES SIN HEADPOD-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <LinearLayout
+                            android:id="@+id/contenedor_result_corchete_good"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.28"
+                            android:layout_marginStart="@dimen/activity_horizontal_margin"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/txt_corchetes_porcentaje_good"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:textColor="@color/data_borde_inf_porcentaje_good"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="28%"
+                                />
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:id="@+id/contenedor_result_corchete_bad"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.72"
+                            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/txt_corchetes_porcentaje_bad"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:textColor="@color/data_borde_inf_porcentaje_bad"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="72%"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--FIN DE RESULTADO DE CORCHETES SIN HEADPOD-->
+
+                </LinearLayout>
+                <!--FIN RESULTADOS-->
+
+
+            </LinearLayout>
+            <!--*******************************************************-->
+            <!--FIN Resultados sin headpod-->
+
+
+
+            <!--Resultados CON headpod-->
+            <!--*******************************************************-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <!--Cabeza-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.12"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:layout_marginStart="5dp"
+                    >
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/informe_comparativo_cabeza_con_hp"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:background="@color/data_fondo"
+                        android:paddingBottom="20dp"
+                        />
+                </LinearLayout>
+
+                <!--RESULTADOS-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.95"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    >
+
+                    <!--BARRA HORIZONTAL SIN HEADPOD-->
+                    <!--NOTA : No dar menos del 8% de ancho para que quepan los numeros-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        >
+
+
+                        <LinearLayout
+                            android:id="@+id/barraPorcentajeRangoGooodChp"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.20"
+                            android:background="@color/data_leyenda_porcentaje_good"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/txtPorcentajeRangoGoodChp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="20%"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/barraPorcentajeRangoFairChp"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.08"
+                            android:background="@color/data_leyenda_porcentaje_fair"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/txtPorcentajeRangoFairChp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="8%"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/barraPorcentajeRangoBadChp"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.50"
+                            android:background="@color/data_leyenda_porcentaje_bad"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/txtPorcentajeRangoBadChp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="50%"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/barraPorcentajeRangoVerBadChp"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.22"
+                            android:background="@color/data_leyenda_porcentaje_very_bad"
+                            android:orientation="horizontal" >
+
+                            <TextView
+
+                                android:id="@+id/txtPorcentajeRangoVeryBadChp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="22%"
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--FIN BARRA HORIZONTAL SIN HEADPOD-->
+
+                    <!--CORCHETES SIN HEADPOD-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingStart="14dp"
+                        android:paddingEnd="14dp"
+                        >
+                        <LinearLayout
+                            android:id="@+id/corchete_inferior_porcentaje_good_chp"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/activity_vertical_margin"
+                            android:layout_weight="0.28"
+
+                            android:background="@drawable/border_inf_porcentaje_good"
+                            android:orientation="horizontal"
+                            >
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/corchete_inferior_porcentaje_bad_chp"
+                            android:layout_width="0dp"
+                            android:layout_height="@dimen/activity_vertical_margin"
+                            android:layout_weight="0.72"
+
+                            android:background="@drawable/border_inf_porcentaje_bad"
+                            android:orientation="horizontal"
+                            >
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--FIN CORCHETES SIN HEADPOD-->
+
+                    <!--RESULTADO DE CORCHETES SIN HEADPOD-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        >
+                        <LinearLayout
+                            android:id="@+id/contenedor_result_corchete_good_chp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.28"
+                            android:layout_marginStart="@dimen/activity_horizontal_margin"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/txt_corchetes_porcentaje_good_chp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:textColor="@color/data_borde_inf_porcentaje_good"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="28%"
+                                />
+
+                        </LinearLayout>
+
+
+
+                        <LinearLayout
+                            android:id="@+id/contenedor_result_corchete_bad_chp"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="0.72"
+                            android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                            android:orientation="horizontal"
+                            >
+
+                            <TextView
+                                android:id="@+id/txt_corchetes_porcentaje_bad_chp"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:gravity="center_horizontal"
+                                android:textColor="@color/data_borde_inf_porcentaje_bad"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="72%"
+                                />
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--FIN DE RESULTADO DE CORCHETES SIN HEADPOD-->
+
+                </LinearLayout>
+                <!--FIN RESULTADOS-->
+
+
+            </LinearLayout>
+            <!--*******************************************************-->
+            <!--FIN Resultados CON headpod-->
+
+
+
+
+
+            <!--Cara_inclinación, cara_flexión y leyenda-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:gravity="center_vertical"
+                >
+
+                <!--Caras-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.20"
+                    android:orientation="vertical"
+                    >
+                    <!--Cara_inclinación-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        >
+
+                        <ImageView
+                            android:id="@+id/img_porcentaje_inclinacion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/rango_inclinacion"
+                            />
+                    </LinearLayout>
+
+                    <!--Cara_flexion-->
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        >
+
+                        <ImageView
+                            android:id="@+id/img_porcentaje_flexion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:adjustViewBounds="true"
+                            android:scaleType="centerCrop"
+                            android:src="@drawable/rango_flexion"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+                <!--Leyenda-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.80"
+                    android:paddingStart="4dp"
+                    android:paddingEnd="4dp"
+                    android:orientation="vertical"
+                    >
+
+                    <!--CABECERA-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        >
+
+                        <!--CABECERA-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                >
+                                <!--Titulo-->
+                                <TextView
+                                    android:id="@+id/txtTituloLeyendaRangos"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:gravity="start"
+                                    android:textColor="@color/ColorSecundadrio"
+                                    android:text="@string/inf_ranks"
+                                    android:textSize="@dimen/text_size_subtitle"
+                                    />
+
+
+                                <LinearLayout
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:background="@color/data_leyenda_porcentaje_good"
+                                    android:layout_marginStart="@dimen/margin_leyenda_size_color_horizontal"
+                                    android:layout_marginEnd="@dimen/margin_leyenda_size_color_horizontal"
+                                    android:visibility="invisible"
+                                    >
+                                </LinearLayout>
+
+
+                                <!--Cabeza-->
+                                    <ImageView
+                                        android:layout_width="25dp"
+                                        android:layout_height="25dp"
+                                        android:src="@drawable/informe_comparativo_cabeza_sin_hp"
+                                        android:adjustViewBounds="true"
+                                        android:scaleType="centerCrop"
+                                        android:background="@color/data_fondo"
+                                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                                        />
+
+                                <!--Cabeza-->
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:src="@drawable/informe_comparativo_cabeza_con_hp"
+                                    android:adjustViewBounds="true"
+                                    android:scaleType="centerCrop"
+                                    android:background="@color/data_fondo"
+                                    />
+
+
+
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+                        <!--FIN CABECERA-->
+
+
+                    </LinearLayout>
+                    <!--FIN CABECERA-->
+
+
+                    <!--Contenedor Favorable-->
+                    <LinearLayout
+                        android:id="@+id/Contendor_porcentaje_favorable"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/activity_vertical_margin"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/data_fondo_porcentaje_good"
+                        android:orientation="vertical"
+                        >
+
+                        <!--Bueno-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            >
+
+                                <LinearLayout
+                                    android:id="@+id/contenedor_leyenda_good"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    >
+                                    <TextView
+                                        android:id="@+id/leyenda_good"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/ColorSecundadrio"
+                                        android:text="@string/inf_bueno"
+                                        android:textSize="@dimen/text_size_standard"
+                                        android:layout_gravity="center_vertical"
+                                        android:ems="4"
+
+                                        />
+
+                                        <LinearLayout
+                                            android:layout_width="18dp"
+                                            android:layout_height="18dp"
+                                            android:background="@color/data_leyenda_porcentaje_good"
+                                            android:layout_marginStart="@dimen/margin_leyenda_size_color_horizontal"
+                                            android:layout_marginEnd="@dimen/margin_leyenda_size_color_horizontal"
+                                            >
+                                        </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/txt_leyenda_good"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/ColorSecundadrio"
+                                        android:text="20%"
+                                        android:layout_gravity="center_vertical"
+                                        android:ems="3"
+                                        android:textSize="@dimen/text_size_standard"
+                                        />
+                                    <TextView
+                                        android:id="@+id/txt_leyenda_good_chp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/ColorSecundadrio"
+                                        android:text="20%"
+                                        android:layout_gravity="center_vertical"
+                                        android:textSize="@dimen/text_size_standard"
+                                        />
+
+                                </LinearLayout>
+
+                        </LinearLayout>
+                        <!--FIN BUENO-->
+
+                        <!--Favorable-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            android:layout_gravity="start"
+                            ><!--FAVORABLE-->
+
+
+
+                                <LinearLayout
+                                    android:id="@+id/contenedor_leyenda_fair"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    >
+
+
+                                    <TextView
+                                        android:id="@+id/leyenda_fair"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/ColorSecundadrio"
+                                        android:text="@string/inf_favorable"
+                                        android:textSize="@dimen/text_size_standard"
+                                        android:ems="4"
+                                        />
+
+
+                                    <LinearLayout
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:background="@color/data_leyenda_porcentaje_fair"
+                                        android:layout_marginStart="@dimen/margin_leyenda_size_color_horizontal"
+                                        android:layout_marginEnd="@dimen/margin_leyenda_size_color_horizontal"
+                                        >
+
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/txt_leyenda_fair"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/ColorSecundadrio"
+
+                                        android:ems="3"
+                                        android:text="8%"
+                                        android:textSize="@dimen/text_size_standard"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/txt_leyenda_fair_chp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/ColorSecundadrio"
+                                        android:text="8%"
+                                        android:textSize="@dimen/text_size_standard"
+                                        />
+                                </LinearLayout>
+
+
+                        </LinearLayout>
+                        <!--FIN FAVORABLE-->
+
+
+                    </LinearLayout>
+                    <!--Fin contenedor favorables-->
+
+
+                    <!--contendor DESFAVORABLE-->
+                    <LinearLayout
+                        android:id="@+id/Contendor_porcentaje_bad"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingBottom="@dimen/activity_vertical_margin"
+                        android:paddingTop="@dimen/activity_vertical_margin"
+                        android:paddingStart="5dp"
+                        android:paddingEnd="5dp"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@color/data_fondo_porcentaje_bad"
+                        android:orientation="vertical"
+                        >
+
+                        <!--BAD-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+
+                            >
+
+                            <LinearLayout
+                                android:id="@+id/contenedor_leyenda_bad"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:orientation="horizontal"
+                                >
+
+
+                                <TextView
+                                    android:id="@+id/leyenda_bad"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/ColorSecundadrio"
+                                    android:text="@string/inf_malo"
+                                    android:textSize="@dimen/text_size_standard"
+                                    android:layout_gravity="center_vertical"
+                                    android:ems="4"
+                                    />
+
+                                <LinearLayout
+                                    android:layout_width="18dp"
+                                    android:layout_height="18dp"
+                                    android:background="@color/data_leyenda_porcentaje_bad"
+                                    android:layout_marginStart="@dimen/margin_leyenda_size_color_horizontal"
+                                    android:layout_marginEnd="@dimen/margin_leyenda_size_color_horizontal"
+                                    >
+                                </LinearLayout>
+
+
+                                <TextView
+                                    android:id="@+id/txt_leyenda_bad"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/ColorSecundadrio"
+                                    android:ems="3"
+                                    android:text="8%"
+                                    android:layout_gravity="center_vertical"
+                                    android:textSize="@dimen/text_size_standard"
+                                    />
+
+                                <TextView
+                                    android:id="@+id/txt_leyenda_bad_chp"
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:textColor="@color/ColorSecundadrio"
+                                    android:text="8%"
+                                    android:layout_gravity="center_vertical"
+                                    android:textSize="@dimen/text_size_standard"
+                                    />
+                            </LinearLayout>
+                        </LinearLayout>
+                        <!--FIN BAD-->
+
+
+                        <!--VERY BAD-->
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:orientation="horizontal"
+                            android:layout_marginTop="@dimen/activity_vertical_margin"
+                            android:layout_gravity="start"
+                            >
+
+
+
+                                <LinearLayout
+                                    android:id="@+id/contenedor_leyenda_"
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    >
+
+                                    <TextView
+                                        android:id="@+id/leyenda_ver_bad"
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/ColorSecundadrio"
+                                        android:text="@string/inf_muy_malo"
+                                        android:textSize="@dimen/text_size_standard"
+                                        android:ems="4"
+                                        />
+
+                                    <LinearLayout
+                                        android:layout_width="18dp"
+                                        android:layout_height="18dp"
+                                        android:background="@color/data_leyenda_porcentaje_very_bad"
+                                        android:layout_marginStart="@dimen/margin_leyenda_size_color_horizontal"
+                                        android:layout_marginEnd="@dimen/margin_leyenda_size_color_horizontal"
+                                        >
+
+
+                                    </LinearLayout>
+
+                                    <TextView
+                                        android:id="@+id/txt_leyenda_very_bad"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/ColorSecundadrio"
+                                        android:ems="3"
+                                        android:text="22%"
+                                        android:textSize="@dimen/text_size_standard"
+                                        />
+
+                                    <TextView
+                                        android:id="@+id/txt_leyenda_very_bad_chp"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:textColor="@color/ColorSecundadrio"
+                                        android:text="22%"
+                                        android:textSize="@dimen/text_size_standard"
+                                        />
+
+                                </LinearLayout>
+
+
+
+
+                        </LinearLayout>
+                        <!--FIN VERY BAD-->
+
+                    </LinearLayout>
+                    <!--Fin contenedor DESFAVORABLE-->
+
+
+                </LinearLayout>
+                <!--fIN LEYENDA-->
+
+            </LinearLayout>
+            <!--FIN Cara_inclinación, cara_flexión y leyenda-->
+
+        </LinearLayout>
+        <!--***************************************************************************-->
+        <!--FIN CONTENDOR PORCENTAJE RANGOS-->
+
+
+
+
+        <!--CONTENEDOR GRAFICAS LINEALES-->
+        <!--***************************************************************************-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+
+            <!--CONTENEDOR GRAFICA LINEAL SIN HEADPOD-->
+            <!--***************************************************************************-->
+            <LinearLayout
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/data_fondo"
+                android:orientation="vertical"
+                >
+
+                <ImageView
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/imgLeyenda_grafico_lineal"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/leyenda_grafica_lineal_position"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_grafica_lineal"
+
+                    >
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/chart1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--***************************************************************************-->
+            <!--FIN CONTENEDOR GRAFICA LINEAL SIN HEADPOD-->
+
+
+
+            <!--CONTENEDOR GRAFICA LINEAL CON HEADPOD-->
+            <!--***************************************************************************-->
+            <LinearLayout
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/data_fondo"
+                android:orientation="vertical"
+                android:layout_marginStart="@dimen/activity_horizontal_margin"
+                >
+
+
+                <ImageView
+                    android:layout_gravity="center_horizontal"
+                    android:id="@+id/imgLeyenda_grafico_lineal_chp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:adjustViewBounds="true"
+                    android:scaleType="fitXY"
+                    android:src="@drawable/leyenda_grafica_lineal_position"
+                    />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/height_grafica_lineal"
+
+                    >
+
+                    <com.github.mikephil.charting.charts.LineChart
+                        android:id="@+id/chart2"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        />
+
+                </LinearLayout>
+
+            </LinearLayout>
+            <!--***************************************************************************-->
+            <!--FIN CONTENEDOR GRAFICA LINEAL CON HEADPOD-->
+
+        </LinearLayout>
+        <!--FIN contendor graficas lineales-->
+        <!--***************************************************************************-->
+
+
+
+        <!--CONTENEDOR INCLINACION-->
+        <!--***************************************************************************-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <!--CONTENEDOR INCLINACIÓN SIN HEAPOD-->
+            <!--***************************************************************************-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.50"
+                android:background="@color/data_fondo"
+                android:paddingStart="@dimen/activity_horizontal_margin"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+
+                >
+
+                <TextView
+                    android:id="@+id/txtTitulo_inclinacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ColorSecundadrio"
+                    android:text="@string/inf_inclinacion"
+                    android:textSize="@dimen/text_size_title"
+                    android:gravity="center_horizontal"
+
+                    />
+
+
+                <!--IMAGEN INCLINACIÓN-->
+                <RelativeLayout
+                    android:id="@+id/imgContenedor_cara_inclinacion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    >
+
+
+
+                    <ImageView
+                        android:id="@+id/imgNeg90Inclination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g1_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        />
+                    <ImageView
+                        android:id="@+id/imgNeg70Inclination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g2_06"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgNeg55Inclination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g1_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        />
+                    <ImageView
+                        android:id="@+id/imgNeg40Inclination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g2_06"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgNeg25Inclination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g1_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgNeutro10Inclination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g2_06"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos25Inclination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g1_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos40Inclination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g2_06"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos55Inclination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g1_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos70Inclination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g2_06"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos90Inclination"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g1_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        />
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/rangos_inclinacion"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/imgFlexion"
+                        android:layout_centerInParent="true"
+                        />
+
+                </RelativeLayout>
+                <!--Fin IMAGEN INCLINACIÓN-->
+
+
+                <!--BORDE BARRA HORIZONTAL-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_inf_barra_porcentajes"
+                    android:padding="2dp"
+                    >
+                    <!--BARRA HORIZONTAL-->
+                    <!--NOTA : No dar menos del 8% de ancho para que quepan los numeros-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        >
+                        <LinearLayout
+                            android:id="@+id/barraInclinacionGood"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.20"
+                            android:background="@color/data_leyenda_porcentaje_good"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/txtBarraInclinacionGood"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="20%"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/barraInclinacionFair"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.08"
+                            android:background="@color/data_leyenda_porcentaje_fair"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/txtBarraInclinacionFair"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="8%"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/barraInclinacionBad"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.50"
+                            android:background="@color/data_leyenda_porcentaje_bad"
+                            android:orientation="horizontal" >
+
+                            <TextView
+
+                                android:id="@+id/txtBarraInclinacionBad"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="50%"
+
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/barraInclinacionVeryBad"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.22"
+                            android:background="@color/data_leyenda_porcentaje_very_bad"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/txtBarraInclinacionVeryBad"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="22%"
+
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--FIN BARRA HORIZONTAL-->
+                </LinearLayout>
+                <!--FIN BORDE BARRA HORIZONTAL-->
+
+                <!--CORCHETES-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+
+                    >
+                    <LinearLayout
+                        android:id="@+id/corcheteInclinationGood"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/activity_vertical_margin"
+                        android:layout_weight="0.28"
+
+                        android:background="@drawable/border_inf_porcentaje_good"
+                        android:orientation="horizontal"
+                        ><!--resultado + 0.02-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/corcheteInclinationBad"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/activity_vertical_margin"
+                        android:layout_weight="0.72"
+                        android:background="@drawable/border_inf_porcentaje_bad"
+                        android:orientation="horizontal"
+                        >
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--FIN CORCHETES-->
+
+                <!--RESULTADO DE CORCHETES-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:id="@+id/contenedorTxtCorcheteGood"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.28"
+                        android:orientation="horizontal"
+
+                        >
+
+                        <TextView
+                            android:id="@+id/txt_porcentaje_good_inclinacion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/data_borde_inf_porcentaje_good"
+                            android:textSize="@dimen/text_size_standard"
+
+                            android:text="28%"
+                            />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/contenedorTxtCorcheteBad"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.72"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:id="@+id/txt_porcentaje_bad_inclinacion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/data_borde_inf_porcentaje_bad"
+                            android:textSize="@dimen/text_size_standard"
+                            android:text="72%"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--FIN DE RESULTADO DE CORCHETES-->
+
+
+
+            </LinearLayout>
+            <!--FIN CONTENEDOR INCLINACIÓN SIN HEAPDO-->
+            <!--***************************************************************************-->
+
+
+            <!--CONTENEDOR INCLINACIÓN CON HEADPOD-->
+            <!--***************************************************************************-->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.50"
+                android:background="@color/data_fondo"
+                android:paddingStart="@dimen/activity_horizontal_margin"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:orientation="vertical"
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+
+                >
+
+                <TextView
+                    android:id="@+id/txtTitulo_inclinacion_conhp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ColorSecundadrio"
+                    android:text="@string/inf_inclinacion"
+                    android:textSize="@dimen/text_size_title"
+                    android:gravity="center_horizontal"
+
+                    />
+
+
+                <!--IMAGEN INCLINACIÓN-->
+                <RelativeLayout
+                    android:id="@+id/imgContenedor_cara_inclinacion_chp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    >
+
+
+
+                    <ImageView
+                        android:id="@+id/imgNeg90InclinationChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g1_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        />
+                    <ImageView
+                        android:id="@+id/imgNeg70InclinationChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g2_06"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgNeg55InclinationChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g1_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        />
+                    <ImageView
+                        android:id="@+id/imgNeg40InclinationChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g2_06"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgNeg25InclinationChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g1_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgNeutro10InclinationChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g2_06"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos25InclinationChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g1_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos40InclinationChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g2_06"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos55InclinationChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g1_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos70InclinationChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g2_06"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos90InclinationChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g1_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        />
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/rangos_inclinacion"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:id="@+id/imgFlexionChp"
+                        android:layout_centerInParent="true"
+                        />
+
+                </RelativeLayout>
+                <!--Fin IMAGEN INCLINACIÓN-->
+
+
+                <!--BORDE BARRA HORIZONTAL-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_inf_barra_porcentajes"
+                    android:padding="2dp"
+                    >
+                    <!--BARRA HORIZONTAL-->
+                    <!--NOTA : No dar menos del 8% de ancho para que quepan los numeros-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        >
+                        <LinearLayout
+                            android:id="@+id/barraInclinacionGoodChp"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.20"
+                            android:background="@color/data_leyenda_porcentaje_good"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/txtBarraInclinacionGood_chp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="20%"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/barraInclinacionFairChp"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.08"
+                            android:background="@color/data_leyenda_porcentaje_fair"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/txtBarraInclinacionFairChp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="8%"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/barraInclinacionBadChp"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.50"
+                            android:background="@color/data_leyenda_porcentaje_bad"
+                            android:orientation="horizontal" >
+
+                            <TextView
+
+                                android:id="@+id/txtBarraInclinacionBadChp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="50%"
+
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/barraInclinacionVeryBadChp"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.22"
+                            android:background="@color/data_leyenda_porcentaje_very_bad"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/txtBarraInclinacionVeryBadChp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="22%"
+
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--FIN BARRA HORIZONTAL-->
+                </LinearLayout>
+                <!--FIN BORDE BARRA HORIZONTAL-->
+
+                <!--CORCHETES-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+
+                    >
+
+
+                    <LinearLayout
+                        android:id="@+id/corcheteInclinationGoodChp"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/activity_vertical_margin"
+                        android:layout_weight="0.28"
+
+                        android:background="@drawable/border_inf_porcentaje_good"
+                        android:orientation="horizontal"
+                        ><!--resultado + 0.02-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/corcheteInclinationBadChp"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/activity_vertical_margin"
+                        android:layout_weight="0.72"
+                        android:background="@drawable/border_inf_porcentaje_bad"
+                        android:orientation="horizontal"
+                        >
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--FIN CORCHETES-->
+
+                <!--RESULTADO DE CORCHETES-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+                    >
+                    <LinearLayout
+                        android:id="@+id/contenedorTxtCorcheteGoodChp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.28"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:id="@+id/txt_porcentaje_good_inclinacion_chp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/data_borde_inf_porcentaje_good"
+                            android:textSize="@dimen/text_size_standard"
+                            android:text="28%"
+                            />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/contenedorTxtCorcheteBadChp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.72"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:id="@+id/txt_porcentaje_bad_inclinacion_chp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:layout_gravity="center_horizontal"
+                            android:textColor="@color/data_borde_inf_porcentaje_bad"
+                            android:textSize="@dimen/text_size_standard"
+                            android:text="72%"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--FIN DE RESULTADO DE CORCHETES-->
+
+
+
+            </LinearLayout>
+            <!--FIN CONTENEDOR INCLINACIÓN CON HEADPOD-->
+            <!--***************************************************************************-->
+
+        </LinearLayout>
+        <!--FIN CONTENEDOR INCLINACION-->
+        <!--***************************************************************************-->
+
+
+
+        <!--CONTENEDOR FLEXIÓN-->
+        <!--***************************************************************************-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            >
+
+            <!--CONTENEDOR FLEXIÓN SIN HEADPOD-->
+            <!--***************************************************************************-->
+            <LinearLayout
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/data_fondo"
+                android:paddingStart="@dimen/activity_horizontal_margin"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/txtTitulo_flexion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ColorSecundadrio"
+                    android:text="@string/inf_flexion"
+                    android:textSize="@dimen/text_size_title"
+                    android:gravity="center_horizontal"
+
+                    />
+
+
+                <!--IMAGEN FLEXIÓN-->
+                <RelativeLayout
+                    android:id="@+id/imgContenedor_cara_flexion"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    >
+
+
+
+                    <ImageView
+                        android:id="@+id/imgNeg90Flexion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g11_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+                    <ImageView
+                        android:id="@+id/imgNeg70Flexion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g2_06"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgNeg55Flexion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g1_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+                    <ImageView
+                        android:id="@+id/imgNeg40Flexion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g2_06"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgNeg25Flexion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g1_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgNeutro10Flexion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g2_06"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos25Flexion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g1_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos40Flexion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g2_06"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos55Flexion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g1_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos70Flexion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g2_06"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+
+
+
+                    <ImageView
+                        android:id="@+id/imgPos90Flexion"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g1_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/rangos_flexion_"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+
+
+                </RelativeLayout>
+                <!--Fin IMAGEN Flexión-->
+
+
+                <!--BORDE BARRA HORIZONTAL-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_inf_barra_porcentajes"
+                    android:padding="2dp"
+                    >
+                    <!--BARRA HORIZONTAL-->
+                    <!--NOTA : No dar menos del 8% de ancho para que quepan los numeros-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        >
+                        <LinearLayout
+                            android:id="@+id/barraFlexionGood"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.20"
+                            android:background="@color/data_leyenda_porcentaje_good"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/txtBarraFlexionGood"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="20%"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/barraFlexionFair"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.08"
+                            android:background="@color/data_leyenda_porcentaje_fair"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/txtBarraFlexionFair"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="8%"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/barraFlexionBad"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.50"
+                            android:background="@color/data_leyenda_porcentaje_bad"
+                            android:orientation="horizontal" >
+
+                            <TextView
+
+                                android:id="@+id/txtBarraFlexionBad"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="50%"
+
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/barraFlexionVeryBad"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.22"
+                            android:background="@color/data_leyenda_porcentaje_very_bad"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/txtBarraFlexionVeryBad"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="22%"
+
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--FIN BARRA HORIZONTAL-->
+                </LinearLayout>
+                <!--FIN BORDE BARRA HORIZONTAL-->
+
+                <!--CORCHETES-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+
+                    >
+                    <LinearLayout
+                        android:id="@+id/corcheteFlexionGood"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/activity_vertical_margin"
+                        android:layout_weight="0.28"
+
+                        android:background="@drawable/border_inf_porcentaje_good"
+                        android:orientation="horizontal"
+                        ><!--resultado + 0.02-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/corcheteFlexionBad"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/activity_vertical_margin"
+                        android:layout_weight="0.72"
+                        android:background="@drawable/border_inf_porcentaje_bad"
+                        android:orientation="horizontal"
+                        >
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--FIN CORCHETES-->
+
+                <!--RESULTADO DE CORCHETES-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:id="@+id/contenedorTxtCorcheteFlexionGood"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.28"
+
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:id="@+id/txt_porcentaje_good_flexion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/data_borde_inf_porcentaje_good"
+                            android:textSize="@dimen/text_size_standard"
+                            android:text="28%"
+                            />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/contenedorTxtCorcheteFlexionBad"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.72"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:id="@+id/txt_porcentaje_bad_flexion"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/data_borde_inf_porcentaje_bad"
+                            android:textSize="@dimen/text_size_standard"
+                            android:text="72%"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--FIN DE RESULTADO DE CORCHETES-->
+
+
+
+            </LinearLayout>
+            <!--***************************************************************************-->
+
+
+            <!--CONTENEDOR FLEXIÓN CON HEADPOD-->
+            <!--***************************************************************************-->
+            <LinearLayout
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.5"
+                android:background="@color/data_fondo"
+                android:paddingStart="@dimen/activity_horizontal_margin"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/txtTitulo_flexion_chp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ColorSecundadrio"
+                    android:text="@string/inf_flexion"
+                    android:textSize="@dimen/text_size_title"
+                    android:gravity="center_horizontal"
+
+                    />
+
+
+                <!--IMAGEN FLEXIÓN-->
+                <RelativeLayout
+                    android:id="@+id/imgContenedor_cara_flexion_chp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    >
+
+
+
+                    <ImageView
+                        android:id="@+id/imgNeg90FlexionChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g11_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+                    <ImageView
+                        android:id="@+id/imgNeg70FlexionChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g2_06"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgNeg55FlexionChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g1_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+                    <ImageView
+                        android:id="@+id/imgNeg40FlexionChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g2_06"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgNeg25FlexionChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g1_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgNeutro10FlexionChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g2_06"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos25FlexionChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g1_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos40FlexionChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g2_06"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos55FlexionChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g1_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos70FlexionChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g2_06"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+
+
+
+                    <ImageView
+                        android:id="@+id/imgPos90FlexionChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/g1_04"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/rangos_flexion_"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="90"
+                        />
+
+
+                </RelativeLayout>
+                <!--Fin IMAGEN Flexión-->
+
+
+                <!--BORDE BARRA HORIZONTAL-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border_inf_barra_porcentajes"
+                    android:padding="2dp"
+                    >
+                    <!--BARRA HORIZONTAL-->
+                    <!--NOTA : No dar menos del 8% de ancho para que quepan los numeros-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal"
+
+                        >
+                        <LinearLayout
+                            android:id="@+id/barraFlexionGoodChp"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.20"
+                            android:background="@color/data_leyenda_porcentaje_good"
+                            android:orientation="horizontal"
+                            android:weightSum="1">
+
+                            <TextView
+                                android:id="@+id/txtBarraFlexionGoodChp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="20%"
+
+                                />
+                        </LinearLayout>
+                        <LinearLayout
+                            android:id="@+id/barraFlexionFairChp"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.08"
+                            android:background="@color/data_leyenda_porcentaje_fair"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/txtBarraFlexionFairChp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="8%"
+                                />
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/barraFlexionBadChp"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.50"
+                            android:background="@color/data_leyenda_porcentaje_bad"
+                            android:orientation="horizontal" >
+
+                            <TextView
+
+                                android:id="@+id/txtBarraFlexionBadChp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="50%"
+
+                                />
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:id="@+id/barraFlexionVeryBadChp"
+                            android:layout_width="0dp"
+                            android:layout_height="30dp"
+                            android:layout_weight="0.22"
+                            android:background="@color/data_leyenda_porcentaje_very_bad"
+                            android:orientation="horizontal" >
+
+                            <TextView
+                                android:id="@+id/txtBarraFlexionVeryBadChp"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:gravity="center"
+                                android:textColor="@color/ColorSecundadrio"
+                                android:textSize="@dimen/text_size_standard"
+                                android:text="22%"
+
+                                />
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+                    <!--FIN BARRA HORIZONTAL-->
+                </LinearLayout>
+                <!--FIN BORDE BARRA HORIZONTAL-->
+
+                <!--CORCHETES-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:paddingStart="2dp"
+                    android:paddingEnd="2dp"
+
+                    >
+                    <LinearLayout
+                        android:id="@+id/corcheteFlexionGoodChp"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/activity_vertical_margin"
+                        android:layout_weight="0.28"
+
+                        android:background="@drawable/border_inf_porcentaje_good"
+                        android:orientation="horizontal"
+                        ><!--resultado + 0.02-->
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/corcheteFlexionBadChp"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/activity_vertical_margin"
+                        android:layout_weight="0.72"
+                        android:background="@drawable/border_inf_porcentaje_bad"
+                        android:orientation="horizontal"
+                        >
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--FIN CORCHETES-->
+
+                <!--RESULTADO DE CORCHETES-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    >
+                    <LinearLayout
+                        android:id="@+id/contenedorTxtCorcheteFlexionGoodChp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.28"
+
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:id="@+id/txt_porcentaje_good_flexionChp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/data_borde_inf_porcentaje_good"
+                            android:textSize="@dimen/text_size_standard"
+                            android:text="28%"
+                            />
+
+                    </LinearLayout>
+
+
+
+                    <LinearLayout
+                        android:id="@+id/contenedorTxtCorcheteFlexionBadChp"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="0.72"
+                        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+                        android:orientation="horizontal"
+                        >
+
+                        <TextView
+                            android:id="@+id/txt_porcentaje_bad_flexionChp"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:gravity="center_horizontal"
+                            android:textColor="@color/data_borde_inf_porcentaje_bad"
+                            android:textSize="@dimen/text_size_standard"
+                            android:text="72%"
+                            />
+                    </LinearLayout>
+
+                </LinearLayout>
+                <!--FIN DE RESULTADO DE CORCHETES-->
+
+
+
+            </LinearLayout>
+            <!--***************************************************************************-->
+
+        </LinearLayout>
+        <!--FIN CONTENEDOR FLEXIÓN-->
+        <!--***************************************************************************-->
+
+
+
+
+
+        <!--CONTENEDOR ROTACIÓN-->
+        <!--***************************************************************************-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <!--CONTENEDOR ROTACIÓN SIN HEADPOD-->
+            <!--***************************************************************************-->
+            <LinearLayout
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.50"
+                android:background="@color/data_fondo"
+                android:paddingStart="@dimen/activity_horizontal_margin"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/txtTitulo_rotation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ColorSecundadrio"
+                    android:text="@string/inf_rotacion"
+                    android:textSize="@dimen/text_size_title"
+                    android:gravity="center_horizontal"
+                    />
+
+
+                <!--IMAGEN ROTACIÓN-->
+                <RelativeLayout
+                    android:id="@+id/imgContenedor_cara_rotation"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imgNeg90Rotation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+                    <ImageView
+                        android:id="@+id/imgNeg70Rotation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgNeg55Rotation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+                    <ImageView
+                        android:id="@+id/imgNeg40Rotation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgNeg25Rotation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgNeutro10Rotation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos25Rotation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos40Rotation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos55Rotation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos70Rotation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos90Rotation"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/rangos_rotacion"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+
+                </RelativeLayout>
+                <!--Fin IMAGEN INCLINACIÓN-->
+            </LinearLayout>
+            <!--***************************************************************************-->
+
+
+
+            <!--CONTENEDOR ROTACIÓN CON HEADPOD-->
+            <!--***************************************************************************-->
+            <LinearLayout
+                android:layout_marginTop="@dimen/activity_vertical_margin"
+                android:layout_marginBottom="@dimen/activity_vertical_margin"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="0.50"
+                android:background="@color/data_fondo"
+                android:paddingStart="@dimen/activity_horizontal_margin"
+                android:paddingEnd="@dimen/activity_horizontal_margin"
+                android:paddingTop="@dimen/activity_vertical_margin"
+                android:paddingBottom="@dimen/activity_vertical_margin"
+                android:orientation="vertical"
+                >
+
+                <TextView
+                    android:id="@+id/txtTitulo_rotation_chp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/ColorSecundadrio"
+                    android:text="@string/inf_rotacion"
+                    android:textSize="@dimen/text_size_title"
+                    android:gravity="center_horizontal"
+                    />
+
+
+                <!--IMAGEN ROTACIÓN-->
+                <RelativeLayout
+                    android:id="@+id/imgContenedor_cara_rotation_chp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    >
+
+                    <ImageView
+                        android:id="@+id/imgNeg90RotationChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+                    <ImageView
+                        android:id="@+id/imgNeg70RotationChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgNeg55RotationChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+                    <ImageView
+                        android:id="@+id/imgNeg40RotationChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgNeg25RotationChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgNeutro10RotationChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos25RotationChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos40RotationChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos55RotationChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos70RotationChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+
+                    <ImageView
+                        android:id="@+id/imgPos90RotationChp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/rangos_rotacion"
+                        android:adjustViewBounds="true"
+                        android:scaleType="centerCrop"
+                        android:layout_centerInParent="true"
+                        android:rotation="180"
+                        />
+
+                </RelativeLayout>
+                <!--Fin IMAGEN INCLINACIÓN-->
+            </LinearLayout>
+            <!--***************************************************************************-->
+
+
+
+
+        </LinearLayout>
+
+
+
+
+        <!--FIN CONTENEDOR ROTACIÓN-->
+        <!--***************************************************************************-->
+
+
+
+
+
+
+
+
+
+    </LinearLayout>
+    </ScrollView>
+</LinearLayout>
+
+
+
+
+
+
+
+

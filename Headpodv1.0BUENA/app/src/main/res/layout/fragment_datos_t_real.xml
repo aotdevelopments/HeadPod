@@ -1,0 +1,381 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/contenedor_fragmentos"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center_horizontal"
+    android:orientation="vertical"
+    android:paddingBottom="2dp"
+    android:paddingTop="2dp"
+    android:background="#ffffff"
+    tools:context=".fragments.DatosEnTRealFragment">
+
+
+        <fragment
+            android:id="@+id/fragmento_barra_temporal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:name="com.siestasystemheadpod.headpodv10.fragments.BarraProgresoTemporalFragment"
+            tools:layout="@layout/fragment_barra_progreso_temporal" /><!-- android:name="com.siestasystemheadpod.headpodv10.fragments.BarraProgresoTemporalFragment"-->
+    <!-- class="com.siestasystemheadpod.headpodv10.fragments.BarraProgresoTemporalFragment"-->
+
+        <!--CONTENEDOR DE CARAS-->
+        <LinearLayout
+            android:id="@+id/linearLayoutPadreScroll"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:orientation="vertical"
+            >
+
+            <!---CONTENEDORES DE LAS CARAS-->
+            <LinearLayout
+                android:id="@+id/linearLayoutH1Caras"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                >
+
+                <!--Cara 3D-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical"
+                    android:layout_gravity="center"
+                    >
+                    <!--Cara 3D cargado dinamicamente-->
+                        <RelativeLayout
+                            android:gravity="center"
+                            android:id="@+id/layout_cara_3D"
+                            android:orientation="vertical"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            >
+                            <include layout="@layout/fragment_cara_inclinacion"/>
+
+                        </RelativeLayout>
+                </LinearLayout>
+
+
+
+
+                <!--Cara flexiones-->
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="0.5"
+                    android:orientation="vertical"
+                    >
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        >
+                        <fragment
+                            android:id="@+id/cara_flexion"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:layout_gravity="center_horizontal"
+                            android:name="com.siestasystemheadpod.headpodv10.fragments.CaraFlexionFragment"
+                            tools:layout="@layout/fragment_cara_flexion"
+                            /> <!---android:name="com.siestasystemheadpod.headpodv10.fragments.CaraFlexionFragment"-->
+
+                        <fragment
+                            android:id="@+id/cara_inclinacion"
+                            android:name="com.siestasystemheadpod.headpodv10.fragments.CaraInclinacionFragment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="2"
+                            android:layout_gravity="center_horizontal"
+                            tools:layout="@layout/fragment_cara_inclinacion" />
+
+                        <!--<fragment
+                            android:id="@+id/leyenda"
+                            android:name="com.siestasystemheadpod.headpodv10.fragments.LeyendaFragment"
+                            android:layout_width="wrap_content"
+                            android:layout_height="0dp"
+                            android:layout_weight="1"
+                            android:layout_gravity="center_horizontal"
+                            tools:layout="@layout/fragment_leyenda" />-->
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+            <!---FIN CONTENEDORES DE LAS CARAS-->
+
+        </LinearLayout>
+        <!--FINCONTENEDOR DE CARAS Y DATOS-->
+
+
+        <!--CONTENEDOR GRAFICA LINEAL-->
+        <!--***************************************************************************-->
+        <LinearLayout
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+
+            android:background="@color/data_fondo"
+            android:orientation="vertical"
+            >
+
+
+            <!--GRÁFICA-->
+            <LinearLayout
+                android:id="@+id/layoutLineChart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                <com.github.mikephil.charting.charts.LineChart
+                    android:id="@+id/chart1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    />
+
+
+            </LinearLayout><!-- android:layout_height="@dimen/height_grafica_lineal"-->
+            <!--FIN GRÁFICA-->
+
+
+
+
+        </LinearLayout>
+        <!--***************************************************************************-->
+        <!--FIN CONTENEDOR GRAFICA LINEAL-->
+
+
+    <!--CONTENEDOR BOTONES-->
+    <!--***************************************************************************-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+
+        <LinearLayout
+            android:id="@+id/contenedorBtnPausarReanudar"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            >
+
+            <ImageView
+                android:layout_marginTop="2dp"
+                android:contentDescription="@string/descripcion_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgBtnPausarReanudar"
+                android:src="@drawable/btn_efectos"
+
+                />
+
+            <TextView
+                android:id="@+id/txtPausarReanudar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/txt_background_efecto"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/pausar"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_standard"
+                android:gravity="center"
+           />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/contenedorBtnMedir"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            >
+
+            <ImageView
+                android:layout_marginTop="2dp"
+                android:contentDescription="@string/descripcion_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgBtnMedir"
+                android:src="@drawable/btn_efectos"
+                android:layout_gravity="center_horizontal"
+                />
+
+            <TextView
+                android:id="@+id/txtMedir"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/txt_background_efecto"
+                android:textSize="@dimen/text_size_standard"
+                android:text="@string/btn_medir"
+                android:textColor="@color/colorPrimary"
+                android:gravity="center"
+                />
+        </LinearLayout>
+
+
+
+
+
+        <LinearLayout
+            android:id="@+id/contenedorBtnReset"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:visibility="invisible"
+            >
+
+            <ImageView
+                android:layout_marginTop="2dp"
+                android:contentDescription="@string/descripcion_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:id="@+id/imgBtnReset"
+                android:src="@drawable/btn_efectos"
+
+                />
+
+            <TextView
+                android:id="@+id/txtReset"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/txt_background_efecto"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:text="@string/reset"
+                android:textColor="@color/colorPrimary"
+                android:textSize="@dimen/text_size_standard"
+                android:gravity="center"
+                />
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+    <!--FIN CONTENEDOR BOTONES-->
+    <!--***************************************************************************-->
+
+
+
+
+</LinearLayout>
+
+
+
+<!--
+
+
+    <ScrollView
+        android:layout_below="@id/fragmento_barra_temporal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fadeScrollbars="false"
+        android:fillViewport="true"
+        android:id="@+id/scrollView">
+
+   </ScrollView>
+
+
+
+    <android.support.percent.PercentRelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/contenedor_fragmentos"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical"
+        android:paddingBottom="@dimen/activity_vertical_margin"
+        android:paddingTop="@dimen/activity_vertical_margin"
+        android:background="#ffffff"
+        tools:context="com.siestasystemheadpod.headpodv10.fragments.AllAvatarFragment">
+
+
+
+        <RelativeLayout
+            android:id="@+id/fragmento_arriba"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </RelativeLayout>
+
+        <fragment
+                android:name="com.siestasystemheadpod.headpodv10.fragments.Cara3DFragment"
+                android:id="@+id/layout_cara_3D"
+                android:orientation="vertical"
+                android:layout_width="0dp"
+                android:layout_below="@+id/fragmento_arriba"
+                android:layout_height="wrap_content"
+                app:layout_widthPercent="80%"
+                >
+        </fragment>
+
+        <fragment
+
+                android:id="@+id/layout_cara_flexion"
+                android:layout_alignParentEnd="true"
+                android:orientation="vertical"
+                android:name="com.siestasystemheadpod.headpodv10.fragments.CaraFlexionFragment"
+                android:layout_below="@+id/fragmento_arriba"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                app:layout_widthPercent="20%">
+        </fragment>
+
+        <fragment
+            android:id="@+id/layout_cara_inclinacion"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/layout_cara_flexion"
+            android:orientation="vertical"
+            android:name="com.siestasystemheadpod.headpodv10.fragments.CaraInclinacionFragment"
+            android:layout_width="0dp"
+            app:layout_widthPercent="20%"
+            android:layout_height="wrap_content">
+
+        </fragment>
+
+
+        <fragment
+            android:id="@+id/layout_cara_rotacion"
+            android:layout_alignParentEnd="true"
+            android:layout_below="@+id/layout_cara_inclinacion"
+            android:orientation="vertical"
+            android:name="com.siestasystemheadpod.headpodv10.fragments.CaraRotacionFragment"
+            android:layout_width="0dp"
+            app:layout_widthPercent="20%"
+            android:layout_height="wrap_content">
+
+        </fragment>
+
+
+        <fragment
+            android:id="@+id/fragmento_botones_avatar"
+            android:orientation="vertical"
+            android:layout_alignParentBottom="true"
+            android:name="com.siestasystemheadpod.headpodv10.fragments.BotonesAvatarFragment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        </fragment>
+
+    </android.support.percent.PercentRelativeLayout>
+-->

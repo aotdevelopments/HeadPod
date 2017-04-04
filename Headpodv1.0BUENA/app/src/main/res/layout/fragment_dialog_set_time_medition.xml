@@ -1,0 +1,92 @@
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:layout_width="wrap_content"
+android:layout_height="wrap_content"
+tools:context="com.siestasystemheadpod.headpodv10.adicionales.DialogSetTimeMedition"
+
+
+
+    android:layout_centerInParent="true"
+    >
+
+
+<TextView
+    android:id="@+id/txtTitulo"
+    android:textSize="20dp"
+    android:layout_marginStart="@dimen/activity_horizontal_margin"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_alignParentTop="true"
+
+    android:layout_marginTop="20dp"
+    android:text="@string/establecer_tiempo" />
+
+    <NumberPicker
+        android:id="@+id/diasPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_below="@id/txtTitulo"
+
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+
+        />
+
+    <NumberPicker
+        android:id="@+id/horasPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+
+        android:layout_alignTop="@+id/diasPicker"
+        android:layout_toEndOf="@+id/dos_puntos1" />
+
+    <NumberPicker
+
+        android:id="@+id/minutosPicker"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/horasPicker"
+        android:layout_toEndOf="@+id/dos_puntos2"
+        android:layout_marginStart="@dimen/activity_horizontal_margin"
+        android:layout_marginEnd="@dimen/activity_horizontal_margin"
+
+        />
+
+
+
+    <TextView
+        android:id="@+id/dos_puntos1"
+        android:textSize="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignTop="@id/diasPicker"
+        android:layout_toEndOf="@id/diasPicker"
+        android:layout_marginTop="63dp"
+        android:text=":"
+        />
+
+    <TextView
+        android:id="@+id/dos_puntos2"
+        android:textSize="40dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_alignTop="@id/minutosPicker"
+        android:layout_toEndOf="@id/horasPicker"
+        android:layout_marginTop="63dp"
+        android:text=":"
+        />
+
+
+
+
+
+
+
+</RelativeLayout>

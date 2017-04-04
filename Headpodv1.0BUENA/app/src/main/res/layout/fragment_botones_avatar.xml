@@ -1,0 +1,84 @@
+
+
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/contenedor"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:gravity="center_horizontal"
+android:orientation="vertical"
+android:paddingBottom="2dp"
+
+android:background="#ffffff"
+tools:context=".fragments.BotonesAvatarFragment">
+
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/txt_background_efecto"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:text="@string/btn_avatar_izquierda_inicio"
+    android:textColor="@color/colorPrimary"
+    android:textSize="@dimen/text_size_standard"
+    android:id="@+id/txtBtnAvatarIzqda"
+    android:gravity="center"
+    android:layout_below="@+id/btnAvatarIzqda"
+    android:layout_alignParentStart="true"
+    android:layout_toStartOf="@+id/imageView2" />
+
+<TextView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@drawable/txt_background_efecto"
+    android:textAppearance="?android:attr/textAppearanceSmall"
+    android:text="@string/btn_avatar_derecha_reset"
+    android:gravity="center"
+    android:id="@+id/txtbtnAvatarDcha"
+    android:textColor="@color/colorPrimary"
+    android:textSize="@dimen/text_size_standard"
+
+    android:layout_below="@+id/btnAvatarDcha"
+    android:layout_alignStart="@+id/btnAvatarDcha"
+    android:layout_alignEnd="@+id/btnAvatarDcha" />
+
+<ImageButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/btnAvatarIzqda"
+    android:contentDescription="@string/descripcion_button"
+
+
+    android:src="@drawable/btn_efectos"
+    android:background="@null"
+
+    android:layout_alignParentTop="true"
+    android:layout_alignParentStart="true"
+    android:layout_toStartOf="@+id/imageView2" />
+
+<ImageButton
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/btnAvatarDcha"
+    android:contentDescription="@string/descripcion_button"
+    android:src="@drawable/btn_efectos"
+    android:background="@null"
+    android:layout_alignParentTop="true"
+    android:layout_alignParentEnd="true"
+    android:layout_toEndOf="@+id/imageView2" />
+
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/imageView2"
+    android:contentDescription="@string/descripcion_button"
+
+    android:src="@drawable/btn_mdpiv2"
+    android:visibility="invisible"
+    android:layout_gravity="center_vertical"
+
+    android:layout_centerHorizontal="true" />
+
+
+</RelativeLayout>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<transition xmlns:android="http://schemas.android.com/apk/res/android"
+    >
+    <item>
+        <shape>
+            <solid android:color="#FFFFFF"/>
+            <stroke
+                android:color="#FFFFFF"
+                android:width="1dp"/>
+            <corners android:radius="3dp"/>
+        </shape>
+    </item>
+
+    <item>
+        <shape>
+            <solid android:color="#55c5cf"/>
+            <stroke
+                android:color="#55c5cf"
+                android:width="1dp"/>
+            <corners android:radius="3dp"/>
+        </shape>
+    </item>
+</transition>
+
+
+

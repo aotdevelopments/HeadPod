@@ -1,0 +1,54 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="margin_logo">0dp</dimen>
+    <dimen name="text_size_logo">100sp</dimen>
+    <dimen name="text_size_title">24sp</dimen>
+    <dimen name="text_size_subtitle">20sp</dimen>
+    <dimen name="text_size_standard">16sp</dimen>
+    <dimen name="text_size_little">10sp</dimen>
+
+    <dimen name="text_size_avisos">13sp</dimen>
+
+    <dimen name="btn_size_standard">75dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="nav_header_vertical_spacing">16dp</dimen>
+    <dimen name="nav_header_height">160dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+    <!--Margin of homeFragment-->
+    <dimen name="margin_left_home">20dp</dimen>
+
+
+    <!--Nombre celda de la cabecera de mis pacientes-->
+    <dimen name="size_text_colum_Name">30dp</dimen>
+
+
+    <!--Informe-->
+    <!--******************************************************************************-->
+
+    <!--Control de movimientos-->
+    <!--*******************************************************************-->
+    <dimen name="inf_size_select_result">40dp</dimen>
+    <dimen name="inf_size_padding_select_result">6dp</dimen>
+    <dimen name="inf_size_select_no_result">28dp</dimen>
+    <!--*********************************************************************-->
+
+
+    <!--Leyenda rangos-->
+    <dimen name="inf_leyenda_rangos_size_horizonal">10dp</dimen>
+    <dimen name="margin_leyenda_size_color_horizontal">6dp</dimen>
+
+    <!--******************************************************************************-->
+
+
+    <!--Leyenda grafica lineal-->
+
+    <dimen name="height_leyenda_lineal">70dp</dimen>
+    <dimen name="height_grafica_lineal">250dp</dimen>
+
+    <!--******************************************************************************-->
+
+
+</resources>

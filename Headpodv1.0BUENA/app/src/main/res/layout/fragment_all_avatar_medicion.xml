@@ -1,0 +1,209 @@
+<RelativeLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+xmlns:tools="http://schemas.android.com/tools"
+android:id="@+id/contenedor_fragmentos"
+android:layout_width="match_parent"
+android:layout_height="wrap_content"
+android:gravity="center_horizontal"
+android:orientation="vertical"
+android:paddingBottom="@dimen/activity_vertical_margin"
+android:background="#ffffff"
+android:clickable="true"
+tools:context=".fragments.AllAvatarMedicionFragment">
+
+    <!--El borde de pestaña se lo doy en AllAvatarMedicionFragment-->
+    <RelativeLayout
+        android:id="@+id/layout_btnIzquierdaAsignancion"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_marginBottom="4dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
+    <!--El borde de pestaña se lo doy en AllAvatarMedicionFragment-->
+    <RelativeLayout
+        android:id="@+id/layout_btnDerechaAsignacion"
+        android:orientation="vertical"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+     
+        android:layout_marginBottom="4dp"
+
+
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
+
+    <!--El borde de pestaña se lo doy en AllAvatarMedicionFragment-->
+    <RelativeLayout
+        android:id="@+id/layout_btnPestanaIzquierda"
+        android:orientation="vertical"
+        android:layout_below="@id/layout_btnIzquierdaAsignancion"
+        android:layout_width="wrap_content"
+        android:clickable="true"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
+    <!--El borde de pestaña se lo doy en AllAvatarMedicionFragment-->
+    <!-- android:background="@drawable/border_btn_below_pestana_inactiva"-->
+    <RelativeLayout
+        android:id="@+id/layout_btnPestanaDerecha"
+        android:orientation="vertical"
+        android:layout_below="@id/layout_btnDerechaAsignacion"
+        android:layout_alignParentEnd="true"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+    android:id="@+id/layout_fragmento_barra_temporal"
+    android:orientation="vertical"
+    android:layout_below="@+id/layout_btnPestanaIzquierda"
+    android:paddingBottom="8dp"
+    android:paddingTop="8dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+    </RelativeLayout>
+
+
+<RelativeLayout
+    android:id="@+id/layout_cara_3D"
+    android:orientation="vertical"
+    android:layout_below="@id/layout_fragmento_barra_temporal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+
+
+
+
+
+
+</RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/layout_datos"
+    android:orientation="vertical"
+    android:layout_below="@+id/layout_cara_3D"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/txtConvulsiones"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:text="@string/convulsiones"
+        android:textColor="@color/ColorSecundadrio"
+        android:textSize="@dimen/text_size_standard"
+        />
+
+    <!--Aquí el valor de las convulsiones-->
+    <TextView
+        android:id="@+id/convulsiones"
+
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        android:text="0"
+        android:textColor="@color/colorPrimary"
+        android:layout_toEndOf="@id/txtConvulsiones"
+        android:textSize="@dimen/text_size_standard"
+        />
+
+    <TextView
+        android:id="@+id/txtVelocidadMedia"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtConvulsiones"
+        android:layout_marginStart="12dp"
+        android:text="@string/velocidad_media"
+        android:textColor="@color/ColorSecundadrio"
+        android:textSize="@dimen/text_size_standard"
+        />
+
+    <!--Aquí el valor de la velocidad media-->
+    <TextView
+        android:id="@+id/velocidadMedia"
+        android:layout_width="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/txtConvulsiones"
+        android:text="0 rad/s"
+        android:textColor="@color/colorPrimary"
+        android:layout_toEndOf="@id/txtVelocidadMedia"
+        android:textSize="@dimen/text_size_standard"
+        />
+
+
+</RelativeLayout>
+
+
+<RelativeLayout
+    android:id="@+id/layout_cara_flexion"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@id/layout_fragmento_barra_temporal"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+</RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/layout_cara_inclinacion"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/layout_cara_flexion"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+</RelativeLayout>
+
+
+<RelativeLayout
+    android:id="@+id/layout_cara_rotacion"
+    android:layout_alignParentEnd="true"
+    android:layout_below="@+id/layout_cara_inclinacion"
+
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+</RelativeLayout>
+
+<RelativeLayout
+    android:id="@+id/fragmento_botones_avatar"
+    android:orientation="vertical"
+    android:layout_alignParentBottom="true"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+</RelativeLayout>
+
+
+
+
+</RelativeLayout>
+
+
+<!--
+    <include
+            layout="@layout/fragment_boton_pestana"/>
+
+
+                    <include
+            layout="@layout/fragment_boton_below_pestana"/>
+-->
+
+
+<!--
+        <include
+            layout="@layout/fragment_barra_progreso_temporal"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+-->

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources >
+    <string-array name="tono_muscular">
+        <item >@string/hipotonia_1</item>
+        <item>@string/hipotonia_2</item>
+        <item>@string/hipotonia_3</item>
+        <item>@string/hipotonia_4</item>
+        <item>@string/hipotonia_5</item>
+    </string-array>
+</resources>

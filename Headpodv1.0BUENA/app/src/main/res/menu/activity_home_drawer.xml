@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <item android:title="@string/cambiar_terapeuta">
+        <menu>
+            <item
+                android:id="@+id/cambiar_terapeuta"
+                android:checkable="true"
+                android:icon="@drawable/ic_people_outline_black_24dp"
+                android:title="@string/cerrar_sesion" />
+        </menu>
+    </item>
+
+
+
+    <item android:title="@string/conectividad_sensor">
+        <menu>
+            <item
+                android:id="@+id/vincular_desvincularSensor"
+                android:checkable="true"
+                android:icon="@drawable/ic_sensor_menu"
+                android:title="@string/vincular_sensor" >
+
+            </item>
+            <!--android:icon="@drawable/sensor"-->
+
+            <!-- android:orderInCategory="100"
+                app:showAsAction="always"-->
+
+        </menu>
+    </item>
+
+    <item android:title="@string/gestion_pacientes">
+        <menu >
+
+
+
+
+            <item
+
+                android:id="@+id/nuevo_paciente"
+                android:checkable="true"
+
+
+                android:icon="@drawable/ic_person_add_black_24dp"
+                android:title="@string/nuevo_paciente" />
+
+
+            <item
+                android:id="@+id/mis_pacientes"
+                android:checkable="true"
+                android:icon="@drawable/ic_person_black_24dp"
+                android:title="@string/mis_pacientes" />
+
+        </menu>
+    </item>
+
+    <group android:checkableBehavior="single">
+
+        <item
+
+            android:id="@+id/homeInicio"
+            android:icon="@drawable/ic_home_black_24dp"
+            android:title="@string/titulo_home" />
+
+        <item
+            android:id="@+id/avatar"
+            android:icon="@drawable/tiempo_real"
+            android:title="@string/avatar" /><!--@string/avatar-->
+
+        <item
+            android:checkable="true"
+            android:id="@+id/cambiar_idioma"
+            android:icon="@drawable/ic_font_download_black_24dp"
+            android:title="@string/cambiar_idioma" />
+        <item
+            android:id="@+id/cerrar_app"
+            android:icon="@drawable/ic_cancel_black_24dp"
+            android:title="@string/cerrar_app" />
+
+
+    </group>
+
+
+
+
+
+    <item android:title="Opciones del sensor">
+        <menu>
+
+            <item
+                android:checkable="true"
+                android:id="@+id/crear_log_bat"
+                android:icon="@drawable/ic_sensor_menu"
+                android:title="crear_Log_bateria" />
+
+            <item
+                android:checkable="true"
+                android:id="@+id/niv_bat"
+                android:icon="@drawable/ic_sensor_menu"
+                android:title="ver % de Bateria" />
+
+            <item
+                android:checkable="true"
+                android:id="@+id/periodo_accel"
+                android:icon="@drawable/ic_sensor_menu"
+                android:title="Cambiar periodo accel" />
+
+            <item
+                android:checkable="true"
+                android:id="@+id/cambiar_near_field"
+                android:icon="@drawable/ic_sensor_menu"
+                android:title="Cambiar near field" />
+
+            <item
+                android:checkable="true"
+                android:id="@+id/cambiar_enable_accel"
+                android:icon="@drawable/ic_sensor_menu"
+                android:title="Cambiar enable accel" />
+
+            <item
+                android:checkable="true"
+                android:id="@+id/cambiar_noti_accel"
+                android:icon="@drawable/ic_sensor_menu"
+                android:title="Cambiar notificaciones accel" />
+
+        </menu>
+    </item>
+
+
+
+</menu>
+
+
+<!--
+
+  <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/nav_gallery"
+            android:icon="@drawable/ic_menu_gallery"
+            android:title="Gallery" />
+
+        <item
+            android:id="@+id/nav_manage"
+            android:icon="@drawable/ic_menu_manage"
+            android:title="Tools" />
+
+               <item
+                android:id="@+id/nav_send"
+                android:icon="@drawable/ic_menu_send"
+                android:title="Send" />
+    </group>
+
+
+
+-->
+
+
+<!--
+        <item
+            android:id="@+id/nav_camera"
+            android:icon="@drawable/ic_menu_camera"
+            android:title="Import" />
+
+
+-->
