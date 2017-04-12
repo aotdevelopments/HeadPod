@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="RasgosView">
+        <attr name="type" format="enum">
+            <enum name="INCLINATION" value="0"/>
+            <enum name="FLEXION" value="1"/>
+        </attr>
+    </declare-styleable>
+</resources>

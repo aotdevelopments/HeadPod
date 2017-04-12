@@ -2,9 +2,13 @@ package com.siestasystemheadpod.headpodv10.fragments.rasgos.element;
 
 import android.content.Context;
 import android.graphics.Canvas;
+import android.graphics.Color;
 import android.graphics.Paint;
 import android.graphics.PorterDuff;
 import android.graphics.Rect;
+import android.support.v4.content.ContextCompat;
+
+import com.siestasystemheadpod.headpodv10.R;
 
 import java.util.LinkedList;
 import java.util.List;
@@ -42,6 +46,10 @@ public class RasgosDesigner {
 
             centerX = width / 2;
             centerY = height / 2;
+
+            Paint paint = new Paint();
+            paint.setColor(ContextCompat.getColor(context, R.color.data_fondo));
+            this.canvas.drawRect(0, 0, width, height, paint);
 
             // dibujamos elementos
             for (RasgosElement rasgosElement : entities) {

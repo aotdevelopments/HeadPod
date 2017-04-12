@@ -38,6 +38,7 @@ import com.siestasystemheadpod.headpodv10.HomeActivity;
 import com.siestasystemheadpod.headpodv10.R;
 import com.siestasystemheadpod.headpodv10.adicionales.Util;
 import com.siestasystemheadpod.headpodv10.adicionales.informe.LoadViewResultMov;
+import com.siestasystemheadpod.headpodv10.fragments.informe.ResultFlexionFragment;
 import com.siestasystemheadpod.headpodv10.fragments.informe.ResultInclinationFragment;
 import com.siestasystemheadpod.headpodv10.fragments.rasgos.RasgosView;
 
@@ -328,7 +329,7 @@ public class InformeFragment extends Fragment implements OnChartValueSelectedLis
     private  LinearLayout contenedorResultRotacion;
 
     private LinearLayout contenedorResultInclination;
-
+    private LinearLayout contenedorResultFlexion;
 
 
     public InformeFragment() {
@@ -701,6 +702,7 @@ public class InformeFragment extends Fragment implements OnChartValueSelectedLis
 
 
         contenedorResultInclination = (LinearLayout) view.findViewById(R.id.contenedor_result_inclination);
+        contenedorResultFlexion = (LinearLayout) view.findViewById(R.id.contenedor_result_flexion);
 
 
 
@@ -2204,6 +2206,8 @@ public class InformeFragment extends Fragment implements OnChartValueSelectedLis
 
         setFragment(resultInclinationFragment,"resultado_inclination",contenedorResultInclination.getId());
 
+        ResultFlexionFragment resultFlexionFragment = new ResultFlexionFragment();
+        setFragment(resultFlexionFragment,"resultado_flexion",contenedorResultFlexion.getId());
 
 
         //Obtenemos el fragmento

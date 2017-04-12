@@ -7,14 +7,14 @@
     android:orientation="vertical"
     android:gravity="center"
     android:background="@color/data_fondo"
-    tools:context=".fragments.informe.ResultInclinationFragment">
+    tools:context=".fragments.informe.ResultFlexionFragment">
 
     <TextView
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="center_vertical"
         android:ems="5"
-        android:text="@string/inf_inclinacion"
+        android:text="@string/inf_flexion"
         android:textAlignment="center"
         android:textColor="@color/ColorSecundadrio"
         android:textSize="@dimen/text_size_subtitle" />
@@ -23,6 +23,12 @@
     <com.siestasystemheadpod.headpodv10.fragments.rasgos.RasgosView
         android:id="@+id/rasgos"
         android:layout_width="match_parent"
-        android:layout_height="400dp" />
+        android:layout_height="400dp"
+        app:type="FLEXION"/>
+
+    <com.siestasystemheadpod.headpodv10.fragments.rasgos.IndicatorBarView
+        android:id="@+id/indicadorBar"
+        android:layout_width="match_parent"
+        android:layout_height="70dp" />
 
 </LinearLayout>

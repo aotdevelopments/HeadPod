@@ -7,7 +7,7 @@ buildscript {
     dependencies {
         //classpath 'com.android.tools.build:gradle:2.2.3'
         //classpath 'com.android.tools.build:gradle:2.3.0-alpha5'
-        classpath 'com.android.tools.build:gradle:2.3.0'
+        classpath 'com.android.tools.build:gradle:2.3.1'
         classpath 'com.android.tools.build:gradle:2.3.0-alpha5'//para el resultados de movimientos
        // classpath "io.realm:realm-gradle-plugin:2.0.2"
         //classpath 'com.github.dcendents:android-maven-gradle-plugin:1.3'

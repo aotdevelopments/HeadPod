@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
 
         rasgosView = (RasgosView) findViewById(R.id.rasgos);
 
-        indexSeekBar = new SparseIntArray();
+        /*indexSeekBar = new SparseIntArray();
         indexSeekBar.put(R.id.ind1, 1);
         indexSeekBar.put(R.id.ind2, 2);
         indexSeekBar.put(R.id.ind3, 3);
@@ -36,9 +36,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         indexSeekBar.put(R.id.ind8, 8);
         indexSeekBar.put(R.id.ind9, 9);
         indexSeekBar.put(R.id.ind10, 10);
-        indexSeekBar.put(R.id.ind11, 11);
+        indexSeekBar.put(R.id.ind11, 11);*/
 
-        ((SeekBar)findViewById(R.id.ind1)).setOnSeekBarChangeListener(this);
+        /*((SeekBar)findViewById(R.id.ind1)).setOnSeekBarChangeListener(this);
         ((SeekBar)findViewById(R.id.ind2)).setOnSeekBarChangeListener(this);
         ((SeekBar)findViewById(R.id.ind3)).setOnSeekBarChangeListener(this);
         ((SeekBar)findViewById(R.id.ind4)).setOnSeekBarChangeListener(this);
@@ -48,7 +48,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         ((SeekBar)findViewById(R.id.ind8)).setOnSeekBarChangeListener(this);
         ((SeekBar)findViewById(R.id.ind9)).setOnSeekBarChangeListener(this);
         ((SeekBar)findViewById(R.id.ind10)).setOnSeekBarChangeListener(this);
-        ((SeekBar)findViewById(R.id.ind11)).setOnSeekBarChangeListener(this);
+        ((SeekBar)findViewById(R.id.ind11)).setOnSeekBarChangeListener(this);*/
 
         // Este es un ejemplo de como pasar los datos al componente
         rasgosView.indicador(6, 20)

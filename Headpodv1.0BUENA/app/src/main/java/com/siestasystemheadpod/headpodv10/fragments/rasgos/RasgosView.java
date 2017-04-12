@@ -2,69 +2,98 @@ package com.siestasystemheadpod.headpodv10.fragments.rasgos;
 
 import android.annotation.TargetApi;
 import android.content.Context;
+import android.content.res.TypedArray;
 import android.graphics.Canvas;
-import android.graphics.PixelFormat;
-import android.os.Handler;
 import android.util.AttributeSet;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
+import android.view.View;
 
+import com.siestasystemheadpod.headpodv10.R;
 import com.siestasystemheadpod.headpodv10.fragments.rasgos.element.RasgosDesigner;
 import com.siestasystemheadpod.headpodv10.fragments.rasgos.element.arco.ArcoElement;
+import com.siestasystemheadpod.headpodv10.fragments.rasgos.element.arco.config.FlexionConfig;
+import com.siestasystemheadpod.headpodv10.fragments.rasgos.element.arco.config.InclinationConfig;
 import com.siestasystemheadpod.headpodv10.fragments.rasgos.element.avatar.Avatar;
 import com.siestasystemheadpod.headpodv10.fragments.rasgos.element.bar.IndicatorBar;
+import com.siestasystemheadpod.headpodv10.fragments.rasgos.element.bar.config.IncludeConfig;
 
 /**
  * Created by plaftware
  */
 
-public class RasgosView extends SurfaceView implements SurfaceHolder.Callback, Runnable {
+public class RasgosView extends View {
 
-    private Handler handler;
     private RasgosDesigner rasgosDesigner;
 
     private ArcoElement arcoElement;
     private IndicatorBar indicatorBar;
+    private Avatar avatar;
+    private Type type;
+    private RasgosListener rasgosListener;
+
+    public enum Type{
+        INCLINATION, FLEXION;
+
+        static Type valueOf(int type){
+            return type == getDefault() ? INCLINATION : FLEXION;
+        }
+
+        static int getDefault(){
+            return 0;
+        }
+    }
+
+    public interface RasgosListener{
+
+        void indicador(int index, int percentage);
+
+        void render();
+    }
 
     public RasgosView(Context context) {
         super(context);
-        init();
+        init(null);
     }
 
     public RasgosView(Context context, AttributeSet attrs) {
         super(context, attrs);
-        init();
+        init(attrs);
     }
 
     public RasgosView(Context context, AttributeSet attrs, int defStyleAttr) {
         super(context, attrs, defStyleAttr);
-        init();
+        init(attrs);
     }
 
     @TargetApi(21)
     public RasgosView(Context context, AttributeSet attrs, int defStyleAttr, int defStyleRes) {
         super(context, attrs, defStyleAttr, defStyleRes);
-        init();
+        init(attrs);
     }
 
-    private void init() {
-        handler = new Handler();
+    private void init(AttributeSet attrs) {
         rasgosDesigner = new RasgosDesigner(getContext());
-        getHolder().addCallback(this);
-        setZOrderOnTop(true);
-        //setZOrderMediaOverlay(true); Para agregar view arriba
-        getHolder().setFormat(PixelFormat.TRANSPARENT);
 
         // init elements
+        type = Type.INCLINATION;
+
+        if(attrs != null){
+            TypedArray typedArray = getContext().getTheme().obtainStyledAttributes(attrs, R.styleable.RasgosView, 0, 0);
+            type = Type.valueOf(typedArray.getInt(R.styleable.RasgosView_type, Type.getDefault()));
+        }
+
         // avatar
-        Avatar avatar = new Avatar(rasgosDesigner);
+        avatar = new Avatar(rasgosDesigner);
+        avatar.setAvatar(type == Type.INCLINATION ? R.drawable.avatar : R.drawable.avatar_flexion);
 
         // arco
-        arcoElement = new ArcoElement(rasgosDesigner);
+        ArcoElement.Config config = type == Type.INCLINATION ? new InclinationConfig() : new FlexionConfig();
+        arcoElement = new ArcoElement(rasgosDesigner, config);
 
         // bar
-        indicatorBar = new IndicatorBar(rasgosDesigner);
-        indicatorBar.setAfterBottonOf(avatar);
+        if(type == Type.INCLINATION){
+            indicatorBar = new IndicatorBar(rasgosDesigner, new IncludeConfig());
+            indicatorBar.setAfterBottonOf(avatar);
+        }
     }
 
     /**
@@ -83,7 +112,14 @@ public class RasgosView extends SurfaceView implements SurfaceHolder.Callback, R
 
     private void indicador0(int index, int percentage) {
         arcoElement.indicador(index, percentage);
-        indicatorBar.indicador(index, percentage);
+
+        if(rasgosListener != null){
+            rasgosListener.indicador(index, percentage);
+        }
+
+        if(type == Type.INCLINATION){
+            indicatorBar.indicador(index, percentage);
+        }
     }
 
     @Override
@@ -92,7 +128,11 @@ public class RasgosView extends SurfaceView implements SurfaceHolder.Callback, R
     }
 
     public void render() {
-        handler.post(this);
+        invalidate();
+
+        if(rasgosListener != null){
+            rasgosListener.render();
+        }
     }
 
     public void clear() {
@@ -102,33 +142,22 @@ public class RasgosView extends SurfaceView implements SurfaceHolder.Callback, R
         render();
     }
 
-    @Override
-    public void surfaceCreated(SurfaceHolder holder) {
-        //render();
+    public Type getType() {
+        return type;
     }
 
-    @Override
-    public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-        render();
+    public void setType(Type type) {
+        this.type = type;
     }
 
-    @Override
-    public void surfaceDestroyed(SurfaceHolder holder) {
-
+    public RasgosListener getRasgosListener() {
+        return rasgosListener;
     }
 
-    @Override
-    public void run() {
-        Canvas canvas = null;
-        try {
-            canvas = getHolder().lockCanvas();
-            synchronized (getHolder()) {
-                draw(canvas);
-            }
-        } finally {
-            if (canvas != null) {
-                getHolder().unlockCanvasAndPost(canvas);
-            }
+    public void setRasgosListener(RasgosListener rasgosListener) {
+        this.rasgosListener = rasgosListener;
+        if(rasgosListener != null){
+            rasgosListener.render();
         }
     }
 }

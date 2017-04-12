@@ -14,7 +14,9 @@ import android.widget.TextView;
 
 import com.siestasystemheadpod.headpodv10.HomeActivity;
 import com.siestasystemheadpod.headpodv10.R;
+import com.siestasystemheadpod.headpodv10.fragments.rasgos.IndicatorBarView;
 import com.siestasystemheadpod.headpodv10.fragments.rasgos.RasgosView;
+import com.siestasystemheadpod.headpodv10.fragments.rasgos.element.bar.IndicatorBar;
 
 
 
@@ -141,7 +143,7 @@ public class ResultInclinationFragment extends Fragment implements View.OnClickL
 
         rasgosView = (RasgosView) view.findViewById(R.id.rasgos);
 
-        indexSeekBar = new SparseIntArray();
+        /*indexSeekBar = new SparseIntArray();
         indexSeekBar.put(R.id.ind1, 1);
         indexSeekBar.put(R.id.ind2, 2);
         indexSeekBar.put(R.id.ind3, 3);
@@ -164,13 +166,15 @@ public class ResultInclinationFragment extends Fragment implements View.OnClickL
         ((SeekBar)view.findViewById(R.id.ind8)).setOnSeekBarChangeListener(this);
         ((SeekBar)view.findViewById(R.id.ind9)).setOnSeekBarChangeListener(this);
         ((SeekBar)view.findViewById(R.id.ind10)).setOnSeekBarChangeListener(this);
-        ((SeekBar)view.findViewById(R.id.ind11)).setOnSeekBarChangeListener(this);
+        ((SeekBar)view.findViewById(R.id.ind11)).setOnSeekBarChangeListener(this);*/
 
         // Este es un ejemplo de como pasar los datos al componente
-        rasgosView.indicador(6, 20)
+        rasgosView.indicador(1, 100)
+                .indicador(6, 100)
                 .indicador(5, 30)
                 .indicador(4, 40)
                 .indicador(3, 10)
+                .indicador(11, 100)
                 .render();
 
     }

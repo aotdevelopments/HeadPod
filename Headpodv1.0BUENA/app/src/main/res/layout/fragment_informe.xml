@@ -911,9 +911,17 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:background="@color/data_fondo"
-            android:orientation="vertical"
-            >
+            android:orientation="vertical">
+        </LinearLayout>
 
+        <LinearLayout
+            android:id="@+id/contenedor_result_flexion"
+            android:layout_marginTop="@dimen/activity_vertical_margin"
+            android:layout_marginBottom="@dimen/activity_vertical_margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/data_fondo"
+            android:orientation="vertical">
         </LinearLayout>
         <!--***************************************************************************-->
         <!--FIN CONTENEDOR AJENO-->

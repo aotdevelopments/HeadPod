@@ -6,6 +6,7 @@ import android.graphics.Rect;
 import com.siestasystemheadpod.headpodv10.fragments.rasgos.element.AbstractRasgosElement;
 import com.siestasystemheadpod.headpodv10.fragments.rasgos.element.IndicatorColors;
 import com.siestasystemheadpod.headpodv10.fragments.rasgos.element.RasgosDesigner;
+import com.siestasystemheadpod.headpodv10.fragments.rasgos.element.arco.ArcoElement;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -22,9 +23,16 @@ public class IndicatorBar extends AbstractRasgosElement {
     private final List<Indicator> indicators;
 
     private final DecimalFormat formater;
+    private Config config;
 
-    public IndicatorBar(RasgosDesigner rasgosDesigner) {
+    public interface Config{
+
+        int getBottomPercentaje();
+    }
+
+    public IndicatorBar(RasgosDesigner rasgosDesigner, Config config) {
         super(rasgosDesigner);
+        this.config = config;
 
         formater = new DecimalFormat("#.#'%'");
         indicators = new ArrayList<>();
@@ -76,7 +84,7 @@ public class IndicatorBar extends AbstractRasgosElement {
             int left = 0;
             int top = afterBottonOf.getBotton();
             float rigth = (int) getRasgosDesigner().getWidth();
-            int bottom = top + (int)getRasgosDesigner().getHeight(7);
+            int bottom = top + (int)getRasgosDesigner().getHeight(config.getBottomPercentaje());
 
             // dibujamos borde
             setStyle(Style.STROKE);

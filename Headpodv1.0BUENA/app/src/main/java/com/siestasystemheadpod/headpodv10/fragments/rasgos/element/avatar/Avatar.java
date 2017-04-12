@@ -1,6 +1,7 @@
 package com.siestasystemheadpod.headpodv10.fragments.rasgos.element.avatar;
 
 import android.graphics.Bitmap;
+import android.support.annotation.DrawableRes;
 
 import com.siestasystemheadpod.headpodv10.fragments.rasgos.element.AbstractRasgosElement;
 import com.siestasystemheadpod.headpodv10.fragments.rasgos.element.RasgosDesigner;
@@ -19,6 +20,7 @@ public class Avatar extends AbstractRasgosElement implements IndicatorBar.AfterB
 
     private int top;
     private int heigthAvatar;
+    private int avatar = R.drawable.avatar;
 
     public Avatar(RasgosDesigner rasgosDesigner) {
         super(rasgosDesigner);
@@ -36,12 +38,20 @@ public class Avatar extends AbstractRasgosElement implements IndicatorBar.AfterB
 
         Bitmap bmp = AndroidBitmapUtils
                 .getBitmapFromVectorDrawable(rasgosDesigner.getContext(),
-                        R.drawable.avatar, widthAvatar, heigthAvatar);
+                        avatar, widthAvatar, heigthAvatar);
         rasgosDesigner.getCanvas().drawBitmap(bmp, left, top, null);
     }
 
     @Override
     public int getBotton() {
         return top + heigthAvatar + (int)rasgosDesigner.getHeight(2);
+    }
+
+    public int getAvatar() {
+        return avatar;
+    }
+
+    public void setAvatar(@DrawableRes int avatar) {
+        this.avatar = avatar;
     }
 }
