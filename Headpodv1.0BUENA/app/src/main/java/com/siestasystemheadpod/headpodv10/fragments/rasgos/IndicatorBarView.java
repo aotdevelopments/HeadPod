@@ -41,6 +41,16 @@ public class IndicatorBarView extends View implements RasgosView.RasgosListener 
     }
 
     private void init() {
+        this.post(new Runnable() {
+            @Override
+            public void run() {
+                float heigth = getWidth() * 20.9f / 100;
+                getLayoutParams().height = (int) heigth;
+                setLayoutParams(getLayoutParams());
+                invalidate();
+            }
+        });
+
         rasgosDesigner = new RasgosDesigner(getContext());
         indicatorBar = new IndicatorBar(rasgosDesigner, new OnlyConfig());
         indicatorBar.setAfterBottonOf(new IndicatorBar.AfterBottonOf() {

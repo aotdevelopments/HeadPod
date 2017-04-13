@@ -23,6 +23,6 @@
     <com.siestasystemheadpod.headpodv10.fragments.rasgos.RasgosView
         android:id="@+id/rasgos"
         android:layout_width="match_parent"
-        android:layout_height="400dp" />
+        android:layout_height="0dp" />
 
 </LinearLayout>

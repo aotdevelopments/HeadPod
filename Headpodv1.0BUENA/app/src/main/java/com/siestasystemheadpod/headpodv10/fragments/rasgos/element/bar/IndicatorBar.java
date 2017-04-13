@@ -6,7 +6,6 @@ import android.graphics.Rect;
 import com.siestasystemheadpod.headpodv10.fragments.rasgos.element.AbstractRasgosElement;
 import com.siestasystemheadpod.headpodv10.fragments.rasgos.element.IndicatorColors;
 import com.siestasystemheadpod.headpodv10.fragments.rasgos.element.RasgosDesigner;
-import com.siestasystemheadpod.headpodv10.fragments.rasgos.element.arco.ArcoElement;
 
 import java.text.DecimalFormat;
 import java.util.ArrayList;
@@ -27,7 +26,30 @@ public class IndicatorBar extends AbstractRasgosElement {
 
     public interface Config{
 
+        /**
+         * Este es porcentaje del grosor de la barra
+         * */
         int getBottomPercentaje();
+
+        /**
+         * Porcentaje del grosor de las lineas
+         * */
+        float getStrokePercentaje();
+
+        /**
+         * Este es porcentaje del texto a rencerizar para los indicadores internos de la barra
+         * */
+        float getTextCenterPercentaje();
+
+        /**
+         * Este es el porcentaje segun el heigth de la pantalla para la posicion de las lineas inferiores del Good o Bad
+         * */
+        float getLineGBPercentaje();
+
+        /**
+         * Este es el porcentaje segun el heigth de la pantalla para la posicion el texto Good o Bad
+         * */
+        float getTextGBPercentaje();
     }
 
     public IndicatorBar(RasgosDesigner rasgosDesigner, Config config) {
@@ -78,7 +100,7 @@ public class IndicatorBar extends AbstractRasgosElement {
 
         if(sumPorcentaje > 0){
 
-            setStrokeWidth(getRasgosDesigner().getHeight(0.5f));
+            setStrokeWidth(getRasgosDesigner().getHeight(config.getStrokePercentaje()));
             setColor(Color.parseColor("#55c5d0"));
 
             int left = 0;
@@ -100,7 +122,7 @@ public class IndicatorBar extends AbstractRasgosElement {
             bottom = bottom - (int) getStrokeWidth();
 
             int good = 0, bad = 0;
-            float textCenterHeigt = getRasgosDesigner().getHeight(1.121f);
+            float textCenterHeigt = getRasgosDesigner().getHeight(config.getTextCenterPercentaje());
 
             float widthStroke = getStrokeWidth() * 2;
             float widthBar = rigth - widthStroke;
@@ -139,8 +161,8 @@ public class IndicatorBar extends AbstractRasgosElement {
             }
 
             // dibujamos indicadores buenos y malos
-            int y = bottom + (int)(getRasgosDesigner().getHeight() * 3.0525f / 100f);
-            int yText = y + (int)(getRasgosDesigner().getHeight() * 3.663f / 100f);
+            int y = bottom + (int)(getRasgosDesigner().getHeight() * config.getLineGBPercentaje() / 100f);
+            int yText = y + (int)(getRasgosDesigner().getHeight() * config.getTextGBPercentaje() / 100f);
 
             int total = good + bad;
 

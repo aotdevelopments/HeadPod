@@ -191,7 +191,12 @@ class IndicadorArcoElement extends AbstractItemArcoElement {
             if(!TextUtils.isEmpty(startLabel)){
                 double textStartAngle = rasgosDesigner.getAngle(startAngle0);
 
-                startX = (float) (startX0 - (HEIGHT_SEPARATOR - (HEIGHT_SEPARATOR / 2)) * Math.sin(textStartAngle));
+                if(startAngle0 > 90){
+                    startX = (float) (startX0 - (HEIGHT_SEPARATOR - (HEIGHT_SEPARATOR / 2)) * Math.sin(textStartAngle));
+                }else{
+                    startX = (float) (startX0 - (HEIGHT_SEPARATOR * 2) * Math.sin(textStartAngle)) - 2.5f;
+                }
+
                 startY = (float) (startY0 - (HEIGHT_SEPARATOR + (HEIGHT_SEPARATOR / 2)) * Math.cos(textStartAngle));
 
                 RasgosDesigner.setTextSizeForWidth(this, arcoElement.getIndicadorFontSize(), startLabel);

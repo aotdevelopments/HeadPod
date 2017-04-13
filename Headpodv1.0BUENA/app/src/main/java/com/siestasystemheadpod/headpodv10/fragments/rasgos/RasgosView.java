@@ -20,7 +20,7 @@ import com.siestasystemheadpod.headpodv10.fragments.rasgos.element.bar.config.In
  * Created by plaftware
  */
 
-public class RasgosView extends View {
+public class RasgosView extends View implements Runnable{
 
     private RasgosDesigner rasgosDesigner;
 
@@ -70,8 +70,21 @@ public class RasgosView extends View {
         init(attrs);
     }
 
+    @Override
+    public void run() {
+
+    }
+
     private void init(AttributeSet attrs) {
-        rasgosDesigner = new RasgosDesigner(getContext());
+        this.post(new Runnable() {
+            @Override
+            public void run() {
+                float heigth = getWidth() * 119.04762f / 100;
+                getLayoutParams().height = (int) heigth;
+                setLayoutParams(getLayoutParams());
+                invalidate();
+            }
+        });
 
         // init elements
         type = Type.INCLINATION;
@@ -80,6 +93,8 @@ public class RasgosView extends View {
             TypedArray typedArray = getContext().getTheme().obtainStyledAttributes(attrs, R.styleable.RasgosView, 0, 0);
             type = Type.valueOf(typedArray.getInt(R.styleable.RasgosView_type, Type.getDefault()));
         }
+
+        rasgosDesigner = new RasgosDesigner(getContext());
 
         // avatar
         avatar = new Avatar(rasgosDesigner);
